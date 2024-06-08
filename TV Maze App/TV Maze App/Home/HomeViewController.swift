@@ -8,12 +8,14 @@
 import UIKit
 
 internal class HomeViewController: UIViewController {
-    private let interactor: HomeInteractor
     private let customView: HomeView
+    private let presenter: HomePresenterInputProtocol
+    private let tableViewManager: HomeTableViewManager
     
-    public init() {
+    internal init(presenter: HomePresenterInputProtocol) {
         self.customView = HomeView()
-        self.interactor = HomeInteractor()
+        self.presenter = presenter
+        self.tableViewManager = HomeTableViewManager()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,35 +24,35 @@ internal class HomeViewController: UIViewController {
         return nil
     }
     
-    public override func loadView() {
+    internal override func loadView() {
         self.view = customView
     }
     
-    public override func viewDidLoad() {
+    internal override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
         customView.searchBar.delegate = self
-        customView.tableView.dataSource = self
-        customView.tableView.delegate = self
+        customView.tableView.dataSource = tableViewManager
+        customView.tableView.delegate = tableViewManager
     }
 }
 
 extension HomeViewController: UISearchBarDelegate {
-    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let query = searchBar.text else { return }
-        interactor.searchShows(query: query)
+        presenter.searchByQuery(query: query)
     }
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+extension HomeViewController: HomePresenterOutputProtocol {
+    public func showSearchResults(shows: [ShowResponse]) {
+        DispatchQueue.main.async {
+            self.tableViewManager.update(with: shows)
+            self.customView.tableView.reloadData()
+        }
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        return UITableViewCell()
+    public func showError(error: Error) {
+        // error
     }
 }
-

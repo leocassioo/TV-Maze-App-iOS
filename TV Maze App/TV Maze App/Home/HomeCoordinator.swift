@@ -16,7 +16,15 @@ internal class HomeCoordinator {
     }
     
     internal func start() {
-        let homeViewController = HomeViewController()
+        let interactor = HomeInteractor()
+        
+        let presenter = HomePresenter()
+        presenter.interactor = interactor
+        interactor.output = presenter
+        
+        let homeViewController = HomeViewController(presenter: presenter)
+        presenter.view = homeViewController
+        
         navigationController.pushViewController(homeViewController, animated: false)
     }
 }

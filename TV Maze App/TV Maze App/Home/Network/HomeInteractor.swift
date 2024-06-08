@@ -9,10 +9,8 @@ import Foundation
 
 internal class HomeInteractor: HomeInteractorInputProtocol {
     internal var output: HomeInteractorOutputProtocol?
-    private let presenter: HomePresenter
     
     internal init() {
-        self.presenter = HomePresenter()
     }
     
     internal func searchByQuery(query: String?) {

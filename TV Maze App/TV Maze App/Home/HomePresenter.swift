@@ -7,10 +7,21 @@
 
 import Foundation
 
-public class HomePresenter {
+internal class HomePresenter: HomePresenterInputProtocol {
+    internal weak var view: HomePresenterOutputProtocol?
+    internal var interactor: HomeInteractorInputProtocol?
     
-    public func presentShows() {
-        
+    internal func searchByQuery(query: String?) {
+        interactor?.searchByQuery(query: query)
     }
 }
 
+extension HomePresenter: HomeInteractorOutputProtocol {
+    func searchByQueryWithSuccess(shows: [ShowResponse]) {
+        view?.showSearchResults(shows: shows)
+    }
+    
+    internal func searchByQueryFailure(error: Error) {
+        view?.showError(error: error)
+    }
+}
