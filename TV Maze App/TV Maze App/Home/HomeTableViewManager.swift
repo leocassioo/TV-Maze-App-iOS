@@ -7,8 +7,15 @@
 
 import UIKit
 
+internal protocol HomeTableViewManagerDelegate: AnyObject {
+    
+    func didSelectedShow(id: Int)
+    
+}
+
 internal class HomeTableViewManager: NSObject, UITableViewDataSource, UITableViewDelegate {
     
+    internal weak var delegate: HomeTableViewManagerDelegate?
     private var shows: [ShowResponse] = []
     
     internal func update(with shows: [ShowResponse]) {
@@ -29,6 +36,8 @@ internal class HomeTableViewManager: NSObject, UITableViewDataSource, UITableVie
     
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard let currentItem = shows[indexPath.row].show, let id = currentItem.id else { return }
+        delegate?.didSelectedShow(id: id)
     }
 }
 

@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 internal class HomeView: UIView {
+    
     internal let searchBar: UISearchBar = {
         let view = UISearchBar()
         return view
@@ -24,9 +25,8 @@ internal class HomeView: UIView {
         return view
     }()
     
-    internal override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    internal init() {
+        super.init(frame: .zero)
         setupViews()
         setupConstraints()
     }

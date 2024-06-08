@@ -7,11 +7,16 @@
 
 import Foundation
 
+internal protocol HomeCoordinatorProtocol: Any {
+    func navigateToDetailsById(id: Int)
+}
+
 // MARK: - View -> Presenter
 internal protocol HomePresenterInputProtocol: AnyObject {
     var view: HomePresenterOutputProtocol? { get set }
     var interactor: HomeInteractorInputProtocol? { get set }
     func searchByQuery(query: String?)
+    func navigateToDetailsById(id: Int)
 }
 
 // MARK: - Presenter -> View

@@ -8,6 +8,7 @@
 import UIKit
 
 internal class HomeCoordinator {
+    
     internal let navigationController: UINavigationController
     
     internal init() {
@@ -21,6 +22,7 @@ internal class HomeCoordinator {
         
         let presenter = HomePresenter()
         presenter.interactor = interactor
+        presenter.coordinator = self
         interactor.output = presenter
         
         let homeViewController = HomeViewController(presenter: presenter)
@@ -38,6 +40,14 @@ internal class HomeCoordinator {
         navigationController.navigationBar.standardAppearance = appearance
         navigationController.navigationBar.scrollEdgeAppearance = appearance
         navigationController.navigationBar.compactAppearance = appearance
+    }
+}
+
+extension HomeCoordinator: HomeCoordinatorProtocol {
+    
+    internal func navigateToDetailsById(id: Int) {
+        let detailsCoordinator = ShowDetailsCoordinator(navigationController: navigationController, showId: id)
+        detailsCoordinator.start()
     }
 }
 

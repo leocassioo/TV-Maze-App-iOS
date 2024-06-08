@@ -8,12 +8,12 @@
 import UIKit
 
 internal class HomeViewController: UIViewController {
-    private let customView: HomeView
+    private let homeView: HomeView
     private let presenter: HomePresenterInputProtocol
     private let tableViewManager: HomeTableViewManager
     
     internal init(presenter: HomePresenterInputProtocol) {
-        self.customView = HomeView()
+        self.homeView = HomeView()
         self.presenter = presenter
         self.tableViewManager = HomeTableViewManager()
         super.init(nibName: nil, bundle: nil)
@@ -25,15 +25,16 @@ internal class HomeViewController: UIViewController {
     }
     
     internal override func loadView() {
-        self.view = customView
+        self.view = homeView
     }
     
     internal override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
-        customView.searchBar.delegate = self
-        customView.tableView.dataSource = tableViewManager
-        customView.tableView.delegate = tableViewManager
+        homeView.searchBar.delegate = self
+        homeView.tableView.dataSource = tableViewManager
+        homeView.tableView.delegate = tableViewManager
+        tableViewManager.delegate = self
         
         configureNavigationBarTitleView()
     }
@@ -59,7 +60,7 @@ extension HomeViewController: HomePresenterOutputProtocol {
     public func showSearchResults(shows: [ShowResponse]) {
         DispatchQueue.main.async {
             self.tableViewManager.update(with: shows)
-            self.customView.tableView.reloadData()
+            self.homeView.tableView.reloadData()
             self.hideSkeleton()
         }
     }
@@ -75,10 +76,17 @@ extension HomeViewController: HomePresenterOutputProtocol {
 extension HomeViewController {
     
     private func showSkeleton() {
-        customView.skeletonView.isHidden = false
+        homeView.skeletonView.isHidden = false
     }
     
     private func hideSkeleton() {
-        customView.skeletonView.isHidden = true
+        homeView.skeletonView.isHidden = true
+    }
+}
+
+extension HomeViewController: HomeTableViewManagerDelegate {
+    
+    internal func didSelectedShow(id: Int) {
+        presenter.navigateToDetailsById(id: id)
     }
 }

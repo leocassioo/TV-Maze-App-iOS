@@ -8,11 +8,17 @@
 import Foundation
 
 internal class HomePresenter: HomePresenterInputProtocol {
+    
     internal weak var view: HomePresenterOutputProtocol?
     internal var interactor: HomeInteractorInputProtocol?
+    internal var coordinator: HomeCoordinatorProtocol?
     
     internal func searchByQuery(query: String?) {
         interactor?.searchByQuery(query: query)
+    }
+    
+    internal func navigateToDetailsById(id: Int) {
+        coordinator?.navigateToDetailsById(id: id)
     }
 }
 
