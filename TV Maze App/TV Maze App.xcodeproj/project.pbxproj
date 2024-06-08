@@ -165,6 +165,7 @@
 				3B19C8482C13DED50075893B /* HomePresenter.swift */,
 				3B19C8542C13EA750075893B /* HomeProtocols.swift */,
 				3B19C85A2C13F04B0075893B /* ShowModel.swift */,
+				3B19C85F2C149C5F0075893B /* HomeTableViewManager.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -200,7 +201,6 @@
 			children = (
 				3B19C8442C13DEA80075893B /* HomeView.swift */,
 				3B19C85D2C149C050075893B /* ShowTableViewCell.swift */,
-				3B19C85F2C149C5F0075893B /* HomeTableViewManager.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
