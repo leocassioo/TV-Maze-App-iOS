@@ -34,6 +34,15 @@ internal class HomeViewController: UIViewController {
         customView.searchBar.delegate = self
         customView.tableView.dataSource = tableViewManager
         customView.tableView.delegate = tableViewManager
+        
+        configureNavigationBarTitleView()
+    }
+    
+    private func configureNavigationBarTitleView() {
+        let logo = UIImage(named: "header_logo")
+        let imageView = UIImageView(image: logo)
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
     }
 }
 

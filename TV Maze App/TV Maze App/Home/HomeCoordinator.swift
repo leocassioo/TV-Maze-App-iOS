@@ -13,6 +13,7 @@ internal class HomeCoordinator {
     internal init() {
         navigationController = UINavigationController()
         navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        configureNavigationBar()
     }
     
     internal func start() {
@@ -26,6 +27,17 @@ internal class HomeCoordinator {
         presenter.view = homeViewController
         
         navigationController.pushViewController(homeViewController, animated: false)
+    }
+    
+    private func configureNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .tmDarkGray
+        appearance.shadowColor = .clear
+        
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
+        navigationController.navigationBar.compactAppearance = appearance
     }
 }
 
