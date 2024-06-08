@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Coordinator
 internal protocol HomeCoordinatorProtocol: Any {
     func navigateToDetailsById(id: Int)
 }
