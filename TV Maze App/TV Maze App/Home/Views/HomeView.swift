@@ -1,28 +1,35 @@
 import UIKit
 import SnapKit
 
-public class HomeView: UIView {
-    public let searchBar: UISearchBar
-    public let tableView: UITableView
+internal class HomeView: UIView {
+    internal let searchBar: UISearchBar = {
+        let view = UISearchBar()
+        return view
+    }()
+    internal let tableView: UITableView = {
+        let tableView = UITableView()
+        return tableView
+    }()
     
-    public override init(frame: CGRect) {
-        searchBar = UISearchBar()
-        tableView = UITableView()
-        
+    internal override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupViews()
         setupConstraints()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    @available(*, unavailable)
+    required internal init?(coder _: NSCoder) {
+        return nil
     }
     
     private func setupViews() {
         
         addSubview(searchBar)
         addSubview(tableView)
+        
+        tableView.register(ShowTableViewCell.self, forCellReuseIdentifier: ShowTableViewCell.identifier)
+
     }
     
     private func setupConstraints() {
