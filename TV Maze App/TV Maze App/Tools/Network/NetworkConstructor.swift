@@ -28,3 +28,16 @@ public enum NetworkEncoder {
     case json
     case urlEncoding
 }
+
+public protocol NetworkConstructor {
+    
+    var path: String {get}
+    
+    var method: NetworkMethod {get}
+    
+    var headers: NetworkHeader {get}
+    
+    var encoding: NetworkEncoder {get}
+    
+    var parameters: Parameters {get}
+}

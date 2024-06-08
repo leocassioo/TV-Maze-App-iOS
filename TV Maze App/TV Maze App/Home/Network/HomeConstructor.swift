@@ -8,7 +8,7 @@
 import Foundation
 
 
-internal enum HomeConstructor {
+internal enum HomeConstructor: NetworkConstructor{
     case search(query: String?)
     
     internal var path: String {
@@ -16,7 +16,6 @@ internal enum HomeConstructor {
         case .search:
             return "/search/shows"
         }
-        
     }
     
     internal var method: NetworkMethod {
@@ -24,7 +23,6 @@ internal enum HomeConstructor {
         case .search:
             return .get
         }
-        
     }
     
     internal var headers: NetworkHeader {
@@ -32,7 +30,6 @@ internal enum HomeConstructor {
         case .search:
             return [:]
         }
-        
     }
     
     internal var encoding: NetworkEncoder {
@@ -40,7 +37,6 @@ internal enum HomeConstructor {
         case .search:
             return .urlEncoding
         }
-        
     }
     
     internal var parameters: Parameters {

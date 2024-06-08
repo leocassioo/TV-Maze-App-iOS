@@ -12,7 +12,7 @@ internal class NetworkService {
     
     private init() {}
     
-    internal func request<T: Decodable>(constructor: HomeConstructor, completion: @escaping (Result<T, Error>) -> Void) {
+    internal func request<T: Decodable>(constructor: NetworkConstructor, completion: @escaping (Result<T, Error>) -> Void) {
         var urlComponents = URLComponents(string: "https://api.tvmaze.com")!
         urlComponents.path = constructor.path
         
