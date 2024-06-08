@@ -15,6 +15,7 @@ internal class AppCoordinator {
         self.window = window
         self.tabBarController = UITabBarController()
         self.window.rootViewController = tabBarController
+        configureTabBarAppearance()
     }
     
     internal func start() {
@@ -27,6 +28,14 @@ internal class AppCoordinator {
         homeCoordinator.start()
         
         window.makeKeyAndVisible()
+    }
+    
+    private func configureTabBarAppearance() {
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = .tmWhite
+        
+        tabBarController.tabBar.standardAppearance = tabBarAppearance
     }
 }
 
