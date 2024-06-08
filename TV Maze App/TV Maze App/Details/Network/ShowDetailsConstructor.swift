@@ -1,48 +1,50 @@
 //
-//  HomeConstructor.swift
+//  ShowDetailsConstructor.swift
 //  TV Maze App
 //
-//  Created by Leonardo de Cassio Andrade Figueiredo on 07/06/24.
+//  Created by Leonardo de Cassio Andrade Figueiredo on 08/06/24.
 //
 
 import Foundation
 
 
-internal enum HomeConstructor: NetworkConstructor{
-    case search(query: String?)
+internal enum ShowDetailsConstructor: NetworkConstructor {
+    case showDetails(id: Int)
+    case aliases(id: Int)
     
     internal var path: String {
         switch self {
-        case .search:
-            return "/search/shows"
+        case .showDetails(let id):
+            return "/shows/\(id)"
+        case .aliases(let id):
+            return "/shows/\(id)/akas"
         }
     }
     
     internal var method: NetworkMethod {
         switch self {
-        case .search:
+        case .showDetails, .aliases:
             return .get
         }
     }
     
     internal var headers: NetworkHeader {
         switch self {
-        case .search:
+        case .showDetails, .aliases:
             return [:]
         }
     }
     
     internal var encoding: NetworkEncoder {
         switch self {
-        case .search:
+        case .showDetails, .aliases:
             return .urlEncoding
         }
+        
     }
     
     internal var parameters: Parameters? {
-        switch self {
-        case .search(let query):
-            return ["q": query ?? String()]
-        }
+        return nil
     }
 }
+

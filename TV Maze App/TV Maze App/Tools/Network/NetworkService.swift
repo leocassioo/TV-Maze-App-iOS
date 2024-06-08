@@ -16,8 +16,9 @@ internal class NetworkService {
         var urlComponents = URLComponents(string: "https://api.tvmaze.com")!
         urlComponents.path = constructor.path
         
-        if constructor.encoding == .urlEncoding {
-            urlComponents.queryItems = constructor.parameters.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+        if constructor.encoding == .urlEncoding,
+            let parameters = constructor.parameters {
+            urlComponents.queryItems = parameters.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
         }
         
         guard let url = urlComponents.url else {
@@ -30,8 +31,9 @@ internal class NetworkService {
         request.httpMethod = constructor.method.rawValue
         request.allHTTPHeaderFields = constructor.headers
         
-        if constructor.encoding == .json {
-            request.httpBody = try? JSONSerialization.data(withJSONObject: constructor.parameters, options: [])
+        if constructor.encoding == .json,
+            let parameters = constructor.parameters {
+            request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
         }
         
         URLSession.shared.dataTask(with: request) { data, response, error in

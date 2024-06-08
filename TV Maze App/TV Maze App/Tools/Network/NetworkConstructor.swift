@@ -7,10 +7,10 @@
 
 import Foundation
 
-public typealias Parameters = [String: Any]
-public typealias NetworkHeader = [String: String]
+internal typealias Parameters = [String: Any]
+internal typealias NetworkHeader = [String: String]
 
-public struct NetworkMethod: RawRepresentable, Equatable, Hashable {
+internal struct NetworkMethod: RawRepresentable, Equatable, Hashable {
 
     public static let get = NetworkMethod(rawValue: "GET")
     public static let post = NetworkMethod(rawValue: "POST")
@@ -24,12 +24,12 @@ public struct NetworkMethod: RawRepresentable, Equatable, Hashable {
     }
 }
 
-public enum NetworkEncoder {
+internal enum NetworkEncoder {
     case json
     case urlEncoding
 }
 
-public protocol NetworkConstructor {
+internal protocol NetworkConstructor {
     
     var path: String {get}
     
@@ -39,5 +39,5 @@ public protocol NetworkConstructor {
     
     var encoding: NetworkEncoder {get}
     
-    var parameters: Parameters {get}
+    var parameters: Parameters? {get}
 }
