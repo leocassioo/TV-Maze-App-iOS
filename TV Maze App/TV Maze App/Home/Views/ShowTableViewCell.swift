@@ -47,6 +47,13 @@ internal class ShowTableViewCell: UITableViewCell {
         return imageView
     }()
     
+    private let skeletonView: SkeletonView = {
+        let view = SkeletonView()
+        view.isHidden = true
+        view.layer.cornerRadius = 4
+        return view
+    }()
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -81,6 +88,7 @@ internal class ShowTableViewCell: UITableViewCell {
         
         contentView.addSubview(stackView)
         contentView.addSubview(arrowImageView)
+        contentView.addSubview(skeletonView)
         
         stackView.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(10)
@@ -92,9 +100,17 @@ internal class ShowTableViewCell: UITableViewCell {
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview().offset(-10)
         }
+        
+        skeletonView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(10)
+        }
+        
+        hideSkeleton()
     }
     
     internal func configure(with show: Show?) {
+        showSkeleton()
+        
         self.nameLabel.text = show?.name ?? ""
         self.showImageView.image = nil
         
@@ -111,6 +127,7 @@ internal class ShowTableViewCell: UITableViewCell {
                 if let data = try? Data(contentsOf: imageUrl), let image = UIImage(data: data) {
                     DispatchQueue.main.async {
                         self.showImageView.image = image
+                        self.hideSkeleton()
                     }
                 }
             }
@@ -118,7 +135,17 @@ internal class ShowTableViewCell: UITableViewCell {
             DispatchQueue.main.async {
                 self.showImageView.image = UIImage(systemName: "photo.tv")
                 self.showImageView.tintColor = .gray
+                self.hideSkeleton()
             }
         }
     }
+    
+    private func showSkeleton() {
+        skeletonView.isHidden = false
+    }
+    
+    private func hideSkeleton() {
+        skeletonView.isHidden = true
+    }
 }
+

@@ -28,6 +28,7 @@
 		3B19C85E2C149C050075893B /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C85D2C149C050075893B /* ShowTableViewCell.swift */; };
 		3B19C8602C149C5F0075893B /* HomeTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C85F2C149C5F0075893B /* HomeTableViewManager.swift */; };
 		3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */; };
+		3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		3B19C85D2C149C050075893B /* ShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewCell.swift; sourceTree = "<group>"; };
 		3B19C85F2C149C5F0075893B /* HomeTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewManager.swift; sourceTree = "<group>"; };
 		3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		3B19C8562C13EC180075893B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3B9F9BDA2C14BB28001836A5 /* Layout */,
 				3B9F9BD62C14B1DA001836A5 /* Color */,
 				3B19C8572C13EC240075893B /* Network */,
 			);
@@ -222,6 +225,14 @@
 				3B19C85A2C13F04B0075893B /* ShowModel.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		3B9F9BDA2C14BB28001836A5 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +384,7 @@
 				3B19C8552C13EA750075893B /* HomeProtocols.swift in Sources */,
 				3B19C8492C13DED50075893B /* HomePresenter.swift in Sources */,
 				3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */,
+				3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */,
 				3B19C8532C13E9400075893B /* NetworkConstructor.swift in Sources */,
 				3B19C8512C13E8F80075893B /* HomeConstructor.swift in Sources */,
 			);

@@ -44,11 +44,13 @@ internal class HomeViewController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imageView
     }
+    
 }
 
 extension HomeViewController: UISearchBarDelegate {
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let query = searchBar.text else { return }
+        showSkeleton()
         presenter.searchByQuery(query: query)
     }
 }
@@ -58,10 +60,25 @@ extension HomeViewController: HomePresenterOutputProtocol {
         DispatchQueue.main.async {
             self.tableViewManager.update(with: shows)
             self.customView.tableView.reloadData()
+            self.hideSkeleton()
         }
     }
     
     public func showError(error: Error) {
-        // error
+        DispatchQueue.main.async {
+            // error
+            self.hideSkeleton()
+        }
+    }
+}
+
+extension HomeViewController {
+    
+    private func showSkeleton() {
+        customView.skeletonView.isHidden = false
+    }
+    
+    private func hideSkeleton() {
+        customView.skeletonView.isHidden = true
     }
 }
