@@ -96,8 +96,15 @@ internal class ShowTableViewCell: UITableViewCell {
     
     internal func configure(with show: Show?) {
         self.nameLabel.text = show?.name ?? ""
-        self.statusLabel.text = show?.status ?? ""
         self.showImageView.image = nil
+        
+        if let status = show?.status {
+            self.statusLabel.text = status.rawValue
+            self.statusLabel.textColor = status.displayColor
+            self.statusLabel.font = status.displayFont
+        } else {
+            self.statusLabel.text = ""
+        }
         
         if let imageUrlString = show?.image?.medium, let imageUrl = URL(string: imageUrlString) {
             DispatchQueue.global().async {

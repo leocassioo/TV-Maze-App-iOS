@@ -160,13 +160,13 @@
 		3B19C8412C13DE670075893B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3B9F9BD92C14B940001836A5 /* Data */,
 				3B19C85C2C149BF40075893B /* Views */,
 				3B19C84F2C13E8E70075893B /* Network */,
 				3B19C83E2C13DE3E0075893B /* HomeCoordinator.swift */,
 				3B19C8422C13DE8F0075893B /* HomeViewController.swift */,
 				3B19C8482C13DED50075893B /* HomePresenter.swift */,
 				3B19C8542C13EA750075893B /* HomeProtocols.swift */,
-				3B19C85A2C13F04B0075893B /* ShowModel.swift */,
 				3B19C85F2C149C5F0075893B /* HomeTableViewManager.swift */,
 			);
 			path = Home;
@@ -214,6 +214,14 @@
 				3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		3B9F9BD92C14B940001836A5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B19C85A2C13F04B0075893B /* ShowModel.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
