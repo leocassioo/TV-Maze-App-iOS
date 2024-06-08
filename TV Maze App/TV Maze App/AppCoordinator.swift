@@ -36,6 +36,9 @@ internal class AppCoordinator {
         tabBarAppearance.backgroundColor = .tmWhite
         
         tabBarController.tabBar.standardAppearance = tabBarAppearance
+        if #available(iOS 15.0, *) {
+            tabBarController.tabBar.scrollEdgeAppearance = tabBarAppearance
+        }
     }
 }
 
