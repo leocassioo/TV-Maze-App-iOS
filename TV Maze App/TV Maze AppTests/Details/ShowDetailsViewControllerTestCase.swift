@@ -5,6 +5,7 @@
 //  Created by Leonardo de Cassio Andrade Figueiredo on 09/06/24.
 //
 
+import SnapshotTesting
 import XCTest
 @testable import TV_Maze_App
 
@@ -24,6 +25,8 @@ final class ShowDetailsViewControllerTestCase: XCTestCase {
         navigationController = UINavigationController(rootViewController: UIViewController())
         navigationController.pushViewController(sut, animated: false)
         _ = sut.view
+        
+        isRecording = false
     }
     
     override func tearDown() {
@@ -89,5 +92,55 @@ final class ShowDetailsViewControllerTestCase: XCTestCase {
         
         // Then
         XCTAssertEqual(navigationController.viewControllers.count, 1)
+    }
+    
+    func test_displayErrorAlert_ShowsAlertController() {
+        // Given
+        let message = "Test error message"
+        
+        // When
+        sut.displayErrorAlert(message: message)
+        
+        // Then
+        XCTAssertEqual(dispatchQueueSpy.calledMethods, [.async])
+    }
+    
+    func test_ShowDetailsViewControllerSnapshot() {
+         // Given
+         let viewModel = ShowDetailsViewModel(
+             title: "Test Title",
+             posterURL: "https://example.com/image.jpg",
+             summary: "Test Summary",
+             rating: "8.0",
+             genres: ["Drama"]
+         )
+         sut.displayShowDetails(viewModel: viewModel)
+         
+         // Then
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+     }
+    
+    func test_ShowDetailsViewControllerSnapshot_Loading() {
+        // Given
+        let viewModel = ShowDetailsViewModel(
+            title: "Test Title",
+            posterURL: "https://example.com/image.jpg",
+            summary: "Test Summary",
+            rating: "8.0",
+            genres: ["Drama"]
+        )
+        sut.detailView.hideLoading()
+        sut.displayShowDetails(viewModel: viewModel)
+        
+        // Then
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+    }
+    
+    func test_ShowDetailsViewControllerLoadingStateSnapshot() {
+        // When
+        sut.viewDidLoad()
+        
+        // Then
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
     }
 }
