@@ -20,9 +20,12 @@ internal class AppCoordinator {
     
     internal func start() {
         let homeCoordinator = HomeCoordinator()
+        let aboutViewController = AboutViewController()
+        aboutViewController.tabBarItem = UITabBarItem(title: "About", image: UIImage(systemName: "person.circle"), tag: 1)
         
         tabBarController.viewControllers = [
-            homeCoordinator.navigationController
+            homeCoordinator.navigationController,
+            aboutViewController
         ]
         
         homeCoordinator.start()

@@ -43,6 +43,14 @@ internal class HomeViewController: UIViewController {
         homeView.tableView.delegate = tableViewManager
         tableViewManager.delegate = self
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+        
+        let tableTapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tableTapGesture.cancelsTouchesInView = false
+        homeView.tableView.addGestureRecognizer(tableTapGesture)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +76,7 @@ internal class HomeViewController: UIViewController {
         }
     }
     
-    internal func hideKeyboard() {
+    @objc internal func hideKeyboard() {
         mainQueue.async {
             self.homeView.searchBar.resignFirstResponder()
         }
