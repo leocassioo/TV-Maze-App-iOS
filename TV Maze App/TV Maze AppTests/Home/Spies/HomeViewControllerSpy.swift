@@ -24,5 +24,4 @@ final class HomeViewControllerSpy: HomePresenterOutputProtocol {
         calledMethods.append(.showError)
     }
     
-    
 }
