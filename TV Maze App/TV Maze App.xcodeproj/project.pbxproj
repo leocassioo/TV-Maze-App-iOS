@@ -13,8 +13,6 @@
 		3B19C8142C13DD050075893B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B19C8132C13DD050075893B /* Assets.xcassets */; };
 		3B19C8172C13DD050075893B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3B19C8162C13DD050075893B /* Base */; };
 		3B19C8222C13DD050075893B /* TV_Maze_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C8212C13DD050075893B /* TV_Maze_AppTests.swift */; };
-		3B19C82C2C13DD050075893B /* TV_Maze_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C82B2C13DD050075893B /* TV_Maze_AppUITests.swift */; };
-		3B19C82E2C13DD050075893B /* TV_Maze_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C82D2C13DD050075893B /* TV_Maze_AppUITestsLaunchTests.swift */; };
 		3B19C83B2C13DE100075893B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C83A2C13DE100075893B /* AppCoordinator.swift */; };
 		3B19C83F2C13DE3E0075893B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C83E2C13DE3E0075893B /* HomeCoordinator.swift */; };
 		3B19C8432C13DE8F0075893B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C8422C13DE8F0075893B /* HomeViewController.swift */; };
@@ -29,6 +27,10 @@
 		3B19C85B2C13F04B0075893B /* ShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C85A2C13F04B0075893B /* ShowModel.swift */; };
 		3B19C85E2C149C050075893B /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C85D2C149C050075893B /* ShowTableViewCell.swift */; };
 		3B19C8602C149C5F0075893B /* HomeTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C85F2C149C5F0075893B /* HomeTableViewManager.swift */; };
+		3B387B442C15FF71003077C1 /* HomeViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B432C15FF71003077C1 /* HomeViewControllerTestCase.swift */; };
+		3B387B462C160131003077C1 /* HomeTableViewManagerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B452C160131003077C1 /* HomeTableViewManagerSpy.swift */; };
+		3B387B492C16062D003077C1 /* DispatchQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B482C16062D003077C1 /* DispatchQueueProtocol.swift */; };
+		3B387B4B2C1606BF003077C1 /* DispatchQueueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B4A2C1606BF003077C1 /* DispatchQueueSpy.swift */; };
 		3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */; };
 		3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */; };
 		3B9F9BDF2C14C3C6001836A5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */; };
@@ -38,17 +40,16 @@
 		3B9F9BE72C14C457001836A5 /* ShowDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BE62C14C457001836A5 /* ShowDetailsProtocols.swift */; };
 		3B9F9BE92C14C4CC001836A5 /* ShowDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BE82C14C4CC001836A5 /* ShowDetailsCoordinator.swift */; };
 		3B9F9BEC2C14C727001836A5 /* ShowDetailsConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BEB2C14C726001836A5 /* ShowDetailsConstructor.swift */; };
+		3BE71E8F2C15F77A00771C0F /* HomePresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE71E8E2C15F77A00771C0F /* HomePresenterTestCase.swift */; };
+		3BE71E922C15F84200771C0F /* ShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE71E912C15F84200771C0F /* ShowModel.swift */; };
+		3BE71E952C15FAAF00771C0F /* HomeViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE71E942C15FAAF00771C0F /* HomeViewControllerSpy.swift */; };
+		3BE71E972C15FB4C00771C0F /* HomeInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE71E962C15FB4C00771C0F /* HomeInteractorSpy.swift */; };
+		3BE71E992C15FBBD00771C0F /* HomeCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE71E982C15FBBD00771C0F /* HomeCoordinatorSpy.swift */; };
+		3BE71E9B2C15FC2200771C0F /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE71E9A2C15FC2200771C0F /* HomePresenterSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		3B19C81E2C13DD050075893B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B19C7FF2C13DD030075893B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B19C8062C13DD030075893B;
-			remoteInfo = "TV Maze App";
-		};
-		3B19C8282C13DD050075893B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B19C7FF2C13DD030075893B /* Project object */;
 			proxyType = 1;
@@ -66,9 +67,6 @@
 		3B19C8162C13DD050075893B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B19C81D2C13DD050075893B /* TV Maze AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TV Maze AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B19C8212C13DD050075893B /* TV_Maze_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_Maze_AppTests.swift; sourceTree = "<group>"; };
-		3B19C8272C13DD050075893B /* TV Maze AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TV Maze AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B19C82B2C13DD050075893B /* TV_Maze_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_Maze_AppUITests.swift; sourceTree = "<group>"; };
-		3B19C82D2C13DD050075893B /* TV_Maze_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_Maze_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3B19C83A2C13DE100075893B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3B19C83E2C13DE3E0075893B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3B19C8422C13DE8F0075893B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +80,10 @@
 		3B19C85A2C13F04B0075893B /* ShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowModel.swift; sourceTree = "<group>"; };
 		3B19C85D2C149C050075893B /* ShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewCell.swift; sourceTree = "<group>"; };
 		3B19C85F2C149C5F0075893B /* HomeTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewManager.swift; sourceTree = "<group>"; };
+		3B387B432C15FF71003077C1 /* HomeViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTestCase.swift; sourceTree = "<group>"; };
+		3B387B452C160131003077C1 /* HomeTableViewManagerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewManagerSpy.swift; sourceTree = "<group>"; };
+		3B387B482C16062D003077C1 /* DispatchQueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueProtocol.swift; sourceTree = "<group>"; };
+		3B387B4A2C1606BF003077C1 /* DispatchQueueSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueSpy.swift; sourceTree = "<group>"; };
 		3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,12 @@
 		3B9F9BE62C14C457001836A5 /* ShowDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsProtocols.swift; sourceTree = "<group>"; };
 		3B9F9BE82C14C4CC001836A5 /* ShowDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsCoordinator.swift; sourceTree = "<group>"; };
 		3B9F9BEB2C14C726001836A5 /* ShowDetailsConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsConstructor.swift; sourceTree = "<group>"; };
+		3BE71E8E2C15F77A00771C0F /* HomePresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTestCase.swift; sourceTree = "<group>"; };
+		3BE71E912C15F84200771C0F /* ShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowModel.swift; sourceTree = "<group>"; };
+		3BE71E942C15FAAF00771C0F /* HomeViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpy.swift; sourceTree = "<group>"; };
+		3BE71E962C15FB4C00771C0F /* HomeInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpy.swift; sourceTree = "<group>"; };
+		3BE71E982C15FBBD00771C0F /* HomeCoordinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorSpy.swift; sourceTree = "<group>"; };
+		3BE71E9A2C15FC2200771C0F /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +111,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3B19C81A2C13DD050075893B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B19C8242C13DD050075893B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -140,7 +141,6 @@
 			children = (
 				3B19C8092C13DD030075893B /* TV Maze App */,
 				3B19C8202C13DD050075893B /* TV Maze AppTests */,
-				3B19C82A2C13DD050075893B /* TV Maze AppUITests */,
 				3B19C8082C13DD030075893B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,7 +150,6 @@
 			children = (
 				3B19C8072C13DD030075893B /* TV Maze App.app */,
 				3B19C81D2C13DD050075893B /* TV Maze AppTests.xctest */,
-				3B19C8272C13DD050075893B /* TV Maze AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,18 +172,12 @@
 		3B19C8202C13DD050075893B /* TV Maze AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B387B472C160600003077C1 /* Tools */,
+				3BE71E902C15F7E300771C0F /* Data */,
+				3BE71E8D2C15F73100771C0F /* Home */,
 				3B19C8212C13DD050075893B /* TV_Maze_AppTests.swift */,
 			);
 			path = "TV Maze AppTests";
-			sourceTree = "<group>";
-		};
-		3B19C82A2C13DD050075893B /* TV Maze AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3B19C82B2C13DD050075893B /* TV_Maze_AppUITests.swift */,
-				3B19C82D2C13DD050075893B /* TV_Maze_AppUITestsLaunchTests.swift */,
-			);
-			path = "TV Maze AppUITests";
 			sourceTree = "<group>";
 		};
 		3B19C8402C13DE5A0075893B /* Assets */ = {
@@ -224,6 +217,7 @@
 				3B9F9BDA2C14BB28001836A5 /* Layout */,
 				3B9F9BD62C14B1DA001836A5 /* Color */,
 				3B19C8572C13EC240075893B /* Network */,
+				3B387B482C16062D003077C1 /* DispatchQueueProtocol.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -244,6 +238,14 @@
 				3B19C85D2C149C050075893B /* ShowTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3B387B472C160600003077C1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				3B387B4A2C1606BF003077C1 /* DispatchQueueSpy.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		3B9F9BD62C14B1DA001836A5 /* Color */ = {
@@ -294,6 +296,36 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		3BE71E8D2C15F73100771C0F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3BE71E932C15FA9800771C0F /* Spy */,
+				3BE71E8E2C15F77A00771C0F /* HomePresenterTestCase.swift */,
+				3B387B432C15FF71003077C1 /* HomeViewControllerTestCase.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3BE71E902C15F7E300771C0F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3BE71E912C15F84200771C0F /* ShowModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3BE71E932C15FA9800771C0F /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				3BE71E942C15FAAF00771C0F /* HomeViewControllerSpy.swift */,
+				3BE71E962C15FB4C00771C0F /* HomeInteractorSpy.swift */,
+				3BE71E982C15FBBD00771C0F /* HomeCoordinatorSpy.swift */,
+				3BE71E9A2C15FC2200771C0F /* HomePresenterSpy.swift */,
+				3B387B452C160131003077C1 /* HomeTableViewManagerSpy.swift */,
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,24 +367,6 @@
 			productReference = 3B19C81D2C13DD050075893B /* TV Maze AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3B19C8262C13DD050075893B /* TV Maze AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B19C8372C13DD050075893B /* Build configuration list for PBXNativeTarget "TV Maze AppUITests" */;
-			buildPhases = (
-				3B19C8232C13DD050075893B /* Sources */,
-				3B19C8242C13DD050075893B /* Frameworks */,
-				3B19C8252C13DD050075893B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3B19C8292C13DD050075893B /* PBXTargetDependency */,
-			);
-			name = "TV Maze AppUITests";
-			productName = "TV Maze AppUITests";
-			productReference = 3B19C8272C13DD050075893B /* TV Maze AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -367,10 +381,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					3B19C81C2C13DD050075893B = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 3B19C8062C13DD030075893B;
-					};
-					3B19C8262C13DD050075893B = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 3B19C8062C13DD030075893B;
 					};
@@ -394,7 +404,6 @@
 			targets = (
 				3B19C8062C13DD030075893B /* TV Maze App */,
 				3B19C81C2C13DD050075893B /* TV Maze AppTests */,
-				3B19C8262C13DD050075893B /* TV Maze AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -410,13 +419,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3B19C81B2C13DD050075893B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B19C8252C13DD050075893B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -451,6 +453,7 @@
 				3B097D572C1550390060026D /* ShowDetailsViewModel.swift in Sources */,
 				3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */,
 				3B19C8532C13E9400075893B /* NetworkConstructor.swift in Sources */,
+				3B387B492C16062D003077C1 /* DispatchQueueProtocol.swift in Sources */,
 				3B9F9BEC2C14C727001836A5 /* ShowDetailsConstructor.swift in Sources */,
 				3B9F9BDF2C14C3C6001836A5 /* ShowDetailsView.swift in Sources */,
 				3B9F9BE12C14C3F6001836A5 /* ShowDetailsViewController.swift in Sources */,
@@ -462,16 +465,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE71E922C15F84200771C0F /* ShowModel.swift in Sources */,
 				3B19C8222C13DD050075893B /* TV_Maze_AppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B19C8232C13DD050075893B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B19C82C2C13DD050075893B /* TV_Maze_AppUITests.swift in Sources */,
-				3B19C82E2C13DD050075893B /* TV_Maze_AppUITestsLaunchTests.swift in Sources */,
+				3B387B4B2C1606BF003077C1 /* DispatchQueueSpy.swift in Sources */,
+				3BE71E9B2C15FC2200771C0F /* HomePresenterSpy.swift in Sources */,
+				3B387B462C160131003077C1 /* HomeTableViewManagerSpy.swift in Sources */,
+				3BE71E972C15FB4C00771C0F /* HomeInteractorSpy.swift in Sources */,
+				3BE71E952C15FAAF00771C0F /* HomeViewControllerSpy.swift in Sources */,
+				3BE71E992C15FBBD00771C0F /* HomeCoordinatorSpy.swift in Sources */,
+				3B387B442C15FF71003077C1 /* HomeViewControllerTestCase.swift in Sources */,
+				3BE71E8F2C15F77A00771C0F /* HomePresenterTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,11 +485,6 @@
 			isa = PBXTargetDependency;
 			target = 3B19C8062C13DD030075893B /* TV Maze App */;
 			targetProxy = 3B19C81E2C13DD050075893B /* PBXContainerItemProxy */;
-		};
-		3B19C8292C13DD050075893B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B19C8062C13DD030075893B /* TV Maze App */;
-			targetProxy = 3B19C8282C13DD050075893B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -711,40 +709,6 @@
 			};
 			name = Release;
 		};
-		3B19C8382C13DD050075893B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leocassioo.TV-Maze-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "TV Maze App";
-			};
-			name = Debug;
-		};
-		3B19C8392C13DD050075893B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leocassioo.TV-Maze-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "TV Maze App";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -771,15 +735,6 @@
 			buildConfigurations = (
 				3B19C8352C13DD050075893B /* Debug */,
 				3B19C8362C13DD050075893B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B19C8372C13DD050075893B /* Build configuration list for PBXNativeTarget "TV Maze AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B19C8382C13DD050075893B /* Debug */,
-				3B19C8392C13DD050075893B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
