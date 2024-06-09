@@ -11,9 +11,9 @@ internal class HomeCoordinator {
     
     internal let navigationController: UINavigationController
     
-    internal init() {
-        navigationController = UINavigationController()
-        navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+    internal init(navigationController: UINavigationController = UINavigationController()) {
+        self.navigationController = navigationController
+        self.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         configureNavigationBar()
     }
     
