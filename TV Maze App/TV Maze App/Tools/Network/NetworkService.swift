@@ -7,7 +7,11 @@
 
 import Foundation
 
-internal class NetworkService {
+internal protocol NetworkServiceProtocol {
+    func request<T: Decodable>(constructor: NetworkConstructor, completion: @escaping (Result<T, Error>) -> Void)
+}
+
+internal class NetworkService: NetworkServiceProtocol {
     static let shared = NetworkService()
     
     private init() {}

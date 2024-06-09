@@ -10,15 +10,18 @@ import Foundation
 internal class ShowDetailsInteractor: ShowDetailsInteractorInputProtocol {
     internal var output: ShowDetailsInteractorOutputProtocol?
     private let showId: Int
+    private let networkService: NetworkServiceProtocol
     
-    internal init(showId: Int) {
+    internal init(showId: Int,
+                  networkService: NetworkServiceProtocol = NetworkService.shared) {
         self.showId = showId
+        self.networkService = networkService
     }
     
     internal func fetchShowDetails() {
         let constructor = ShowDetailsConstructor.showDetails(id: showId)
         
-        NetworkService.shared.request(constructor: constructor) { (result: Result<Show, Error>) in
+        networkService.request(constructor: constructor) { (result: Result<Show, Error>) in
             switch result {
             case .success(let show):
                 self.output?.didFetchShowDetails(showDetails: show)
@@ -31,7 +34,7 @@ internal class ShowDetailsInteractor: ShowDetailsInteractorInputProtocol {
     internal func fetchAliases() {
         let constructor = ShowDetailsConstructor.aliases(id: showId)
         
-        NetworkService.shared.request(constructor: constructor) { (result: Result<[AliaseModel], Error>) in
+        networkService.request(constructor: constructor) { (result: Result<[AliaseModel], Error>) in
             switch result {
             case .success(let aliases):
                 self.output?.didFetchAliases(aliases: aliases)

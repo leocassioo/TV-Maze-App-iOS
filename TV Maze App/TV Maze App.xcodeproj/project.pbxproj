@@ -34,6 +34,10 @@
 		3B387B4D2C160A48003077C1 /* UINavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B4C2C160A48003077C1 /* UINavigationControllerSpy.swift */; };
 		3B387B4F2C160A7C003077C1 /* HomeCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B4E2C160A7C003077C1 /* HomeCoordinatorTestCase.swift */; };
 		3B387B512C160C02003077C1 /* ShowTableViewCellSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B502C160C02003077C1 /* ShowTableViewCellSpy.swift */; };
+		3B387B542C160E62003077C1 /* NetworkServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B532C160E62003077C1 /* NetworkServiceSpy.swift */; };
+		3B387B562C160F87003077C1 /* HomeInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B552C160F87003077C1 /* HomeInteractorTestCase.swift */; };
+		3B387B582C160FBA003077C1 /* HomeInteractorOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B572C160FBA003077C1 /* HomeInteractorOutputSpy.swift */; };
+		3B387B5A2C161165003077C1 /* HomeConstructorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B592C161165003077C1 /* HomeConstructorTestCase.swift */; };
 		3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */; };
 		3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */; };
 		3B9F9BDF2C14C3C6001836A5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */; };
@@ -90,6 +94,10 @@
 		3B387B4C2C160A48003077C1 /* UINavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpy.swift; sourceTree = "<group>"; };
 		3B387B4E2C160A7C003077C1 /* HomeCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTestCase.swift; sourceTree = "<group>"; };
 		3B387B502C160C02003077C1 /* ShowTableViewCellSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewCellSpy.swift; sourceTree = "<group>"; };
+		3B387B532C160E62003077C1 /* NetworkServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceSpy.swift; sourceTree = "<group>"; };
+		3B387B552C160F87003077C1 /* HomeInteractorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTestCase.swift; sourceTree = "<group>"; };
+		3B387B572C160FBA003077C1 /* HomeInteractorOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorOutputSpy.swift; sourceTree = "<group>"; };
+		3B387B592C161165003077C1 /* HomeConstructorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstructorTestCase.swift; sourceTree = "<group>"; };
 		3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
@@ -249,10 +257,19 @@
 		3B387B472C160600003077C1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3B387B522C160E4E003077C1 /* Network */,
 				3B387B4A2C1606BF003077C1 /* DispatchQueueSpy.swift */,
 				3B387B4C2C160A48003077C1 /* UINavigationControllerSpy.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		3B387B522C160E4E003077C1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3B387B532C160E62003077C1 /* NetworkServiceSpy.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		3B9F9BD62C14B1DA001836A5 /* Color */ = {
@@ -310,6 +327,8 @@
 				3BE71E8E2C15F77A00771C0F /* HomePresenterTestCase.swift */,
 				3B387B432C15FF71003077C1 /* HomeViewControllerTestCase.swift */,
 				3B387B4E2C160A7C003077C1 /* HomeCoordinatorTestCase.swift */,
+				3B387B552C160F87003077C1 /* HomeInteractorTestCase.swift */,
+				3B387B592C161165003077C1 /* HomeConstructorTestCase.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -331,6 +350,7 @@
 				3BE71E9A2C15FC2200771C0F /* HomePresenterSpy.swift */,
 				3B387B452C160131003077C1 /* HomeTableViewManagerSpy.swift */,
 				3B387B502C160C02003077C1 /* ShowTableViewCellSpy.swift */,
+				3B387B572C160FBA003077C1 /* HomeInteractorOutputSpy.swift */,
 			);
 			path = Spy;
 			sourceTree = "<group>";
@@ -477,12 +497,16 @@
 				3BE71E922C15F84200771C0F /* ShowModel.swift in Sources */,
 				3B387B4D2C160A48003077C1 /* UINavigationControllerSpy.swift in Sources */,
 				3B19C8222C13DD050075893B /* TV_Maze_AppTests.swift in Sources */,
+				3B387B5A2C161165003077C1 /* HomeConstructorTestCase.swift in Sources */,
 				3B387B4B2C1606BF003077C1 /* DispatchQueueSpy.swift in Sources */,
+				3B387B562C160F87003077C1 /* HomeInteractorTestCase.swift in Sources */,
 				3BE71E9B2C15FC2200771C0F /* HomePresenterSpy.swift in Sources */,
 				3B387B512C160C02003077C1 /* ShowTableViewCellSpy.swift in Sources */,
 				3B387B462C160131003077C1 /* HomeTableViewManagerSpy.swift in Sources */,
 				3BE71E972C15FB4C00771C0F /* HomeInteractorSpy.swift in Sources */,
+				3B387B582C160FBA003077C1 /* HomeInteractorOutputSpy.swift in Sources */,
 				3BE71E952C15FAAF00771C0F /* HomeViewControllerSpy.swift in Sources */,
+				3B387B542C160E62003077C1 /* NetworkServiceSpy.swift in Sources */,
 				3BE71E992C15FBBD00771C0F /* HomeCoordinatorSpy.swift in Sources */,
 				3B387B4F2C160A7C003077C1 /* HomeCoordinatorTestCase.swift in Sources */,
 				3B387B442C15FF71003077C1 /* HomeViewControllerTestCase.swift in Sources */,
