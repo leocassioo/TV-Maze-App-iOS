@@ -10,9 +10,12 @@ import UIKit
 internal class ShowDetailsViewController: UIViewController {
     private let detailView = ShowDetailsView()
     private let presenter: ShowDetailsPresenterInputProtocol
+    private let mainQueue: DispatchQueueProtocol
     
-    internal init(presenter: ShowDetailsPresenterInputProtocol) {
+    internal init(presenter: ShowDetailsPresenterInputProtocol,
+                  mainQueue: DispatchQueueProtocol = DispatchQueue.main) {
         self.presenter = presenter
+        self.mainQueue = mainQueue
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -63,7 +66,7 @@ internal class ShowDetailsViewController: UIViewController {
 
 extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
     internal func displayShowDetails(viewModel: ShowDetailsViewModel) {
-        DispatchQueue.main.async {
+        mainQueue.async {
             self.detailView.titleLabel.text = viewModel.title
             self.detailView.ratingLabel.text = viewModel.rating
             
@@ -86,7 +89,7 @@ extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
     }
     
     internal func dispayAliases(aliases: [AliaseModel]) {
-        DispatchQueue.main.async {
+        mainQueue.async {
             self.detailView.configureAliases(with: aliases)
         }
     }
