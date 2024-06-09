@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B097D4B2C1505420060026D /* AliaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B097D4A2C1505420060026D /* AliaseModel.swift */; };
 		3B097D572C1550390060026D /* ShowDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B097D562C1550390060026D /* ShowDetailsViewModel.swift */; };
 		3B19C80B2C13DD030075893B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C80A2C13DD030075893B /* AppDelegate.swift */; };
 		3B19C8142C13DD050075893B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B19C8132C13DD050075893B /* Assets.xcassets */; };
@@ -42,6 +41,7 @@
 		3B387B602C161353003077C1 /* ShowDetailsViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B5F2C161353003077C1 /* ShowDetailsViewControllerSpy.swift */; };
 		3B387B622C1613EF003077C1 /* ShowDetailsCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B612C1613EF003077C1 /* ShowDetailsCoordinatorSpy.swift */; };
 		3B387B642C16140F003077C1 /* ShowDetailsInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B632C16140F003077C1 /* ShowDetailsInteractorSpy.swift */; };
+		3B387B662C161629003077C1 /* ShowDetailsPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B652C161629003077C1 /* ShowDetailsPresenterTestCase.swift */; };
 		3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */; };
 		3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */; };
 		3B9F9BDF2C14C3C6001836A5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */; };
@@ -70,7 +70,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B097D4A2C1505420060026D /* AliaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliaseModel.swift; sourceTree = "<group>"; };
 		3B097D562C1550390060026D /* ShowDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewModel.swift; sourceTree = "<group>"; };
 		3B19C8072C13DD030075893B /* TV Maze App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TV Maze App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B19C80A2C13DD030075893B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		3B387B5F2C161353003077C1 /* ShowDetailsViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewControllerSpy.swift; sourceTree = "<group>"; };
 		3B387B612C1613EF003077C1 /* ShowDetailsCoordinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsCoordinatorSpy.swift; sourceTree = "<group>"; };
 		3B387B632C16140F003077C1 /* ShowDetailsInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsInteractorSpy.swift; sourceTree = "<group>"; };
+		3B387B652C161629003077C1 /* ShowDetailsPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsPresenterTestCase.swift; sourceTree = "<group>"; };
 		3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
@@ -285,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				3B387B5C2C16131E003077C1 /* Spies */,
+				3B387B652C161629003077C1 /* ShowDetailsPresenterTestCase.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -312,7 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				3B19C85A2C13F04B0075893B /* ShowModel.swift */,
-				3B097D4A2C1505420060026D /* AliaseModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -493,7 +493,6 @@
 				3B19C8592C13EC300075893B /* NetworkService.swift in Sources */,
 				3B19C8432C13DE8F0075893B /* HomeViewController.swift in Sources */,
 				3B19C83B2C13DE100075893B /* AppCoordinator.swift in Sources */,
-				3B097D4B2C1505420060026D /* AliaseModel.swift in Sources */,
 				3B19C85E2C149C050075893B /* ShowTableViewCell.swift in Sources */,
 				3B19C83F2C13DE3E0075893B /* HomeCoordinator.swift in Sources */,
 				3B19C8452C13DEA80075893B /* HomeView.swift in Sources */,
@@ -534,6 +533,7 @@
 				3B387B512C160C02003077C1 /* ShowTableViewCellSpy.swift in Sources */,
 				3B387B462C160131003077C1 /* HomeTableViewManagerSpy.swift in Sources */,
 				3BE71E972C15FB4C00771C0F /* HomeInteractorSpy.swift in Sources */,
+				3B387B662C161629003077C1 /* ShowDetailsPresenterTestCase.swift in Sources */,
 				3B387B642C16140F003077C1 /* ShowDetailsInteractorSpy.swift in Sources */,
 				3B387B582C160FBA003077C1 /* HomeInteractorOutputSpy.swift in Sources */,
 				3BE71E952C15FAAF00771C0F /* HomeViewControllerSpy.swift in Sources */,

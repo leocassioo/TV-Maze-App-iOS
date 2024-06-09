@@ -106,3 +106,9 @@ extension Link {
     }
 }
 
+extension AliaseModel {
+    static func dummy(name: String = "name", country: Country = Country.dummy()) -> AliaseModel {
+        .init(name: name, country: country)
+    }
+}
+

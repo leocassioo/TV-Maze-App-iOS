@@ -111,3 +111,10 @@ enum ShowStatus: String, Decodable {
     }
 }
 
+internal struct AliaseModel: Decodable {
+    
+    let name: String
+    let country: Country?
+    
+}
+
