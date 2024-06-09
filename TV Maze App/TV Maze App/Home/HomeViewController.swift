@@ -88,9 +88,11 @@ extension HomeViewController: HomePresenterOutputProtocol {
         }
     }
     
-    public func showError(error: Error) {
+    public func showError(message: String) {
         mainQueue.async {
-            // error
+            let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
             self.hideSkeleton()
         }
     }

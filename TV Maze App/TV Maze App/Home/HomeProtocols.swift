@@ -23,7 +23,7 @@ internal protocol HomePresenterInputProtocol: AnyObject {
 // MARK: - Presenter -> View
 internal protocol HomePresenterOutputProtocol: AnyObject {
     func showSearchResults(shows: [ShowResponse])
-    func showError(error: Error)
+    func showError(message: String)
 }
 
 // MARK: - Presenter -> Interactor

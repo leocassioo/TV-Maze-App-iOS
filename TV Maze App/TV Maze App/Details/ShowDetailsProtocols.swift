@@ -39,4 +39,5 @@ internal protocol ShowDetailsPresenterInputProtocol: AnyObject {
 internal protocol ShowDetailsPresenterOutputProtocol: AnyObject {
     func displayShowDetails(viewModel: ShowDetailsViewModel)
     func dispayAliases(aliases: [AliaseModel])
+    func displayErrorAlert(message: String)
 }

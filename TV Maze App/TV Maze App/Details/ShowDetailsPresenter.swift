@@ -29,7 +29,7 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
     }
     
     internal func didFailToFetchShowDetails(with error: Error) {
-        // error
+        view?.displayErrorAlert(message: error.localizedDescription)
     }
     
     func didFetchAliases(aliases: [AliaseModel]?) {
@@ -38,6 +38,6 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
     }
     
     func didFailToFetchAliases(with error: Error) {
-        // error
+        view?.displayErrorAlert(message: error.localizedDescription)
     }
 }

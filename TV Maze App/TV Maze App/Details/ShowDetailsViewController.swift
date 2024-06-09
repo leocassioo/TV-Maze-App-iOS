@@ -93,4 +93,14 @@ extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
             self.detailView.configureAliases(with: aliases)
         }
     }
+    
+    internal func displayErrorAlert(message: String) {
+        mainQueue.async {
+            let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                self.backButtonTapped()
+            }))
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
 }

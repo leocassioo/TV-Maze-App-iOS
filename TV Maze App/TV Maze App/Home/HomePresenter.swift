@@ -29,6 +29,6 @@ extension HomePresenter: HomeInteractorOutputProtocol {
     }
     
     internal func searchByQueryFailure(error: Error) {
-        view?.showError(error: error)
+        view?.showError(message: error.localizedDescription)
     }
 }
