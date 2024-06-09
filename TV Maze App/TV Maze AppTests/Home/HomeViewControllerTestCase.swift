@@ -24,7 +24,7 @@ final class HomeViewControllerTestCase: XCTestCase {
         sut = HomeViewController(presenter: presenterSpy, tableViewManager: tableViewManagerSpy, mainQueue: dispatchQueueSpy)
         _ = sut.view
         
-        isRecording = false
+        isRecording = true
     }
     
     override func tearDown() {

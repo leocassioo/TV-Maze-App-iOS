@@ -11,7 +11,6 @@
 		3B19C80B2C13DD030075893B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C80A2C13DD030075893B /* AppDelegate.swift */; };
 		3B19C8142C13DD050075893B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B19C8132C13DD050075893B /* Assets.xcassets */; };
 		3B19C8172C13DD050075893B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3B19C8162C13DD050075893B /* Base */; };
-		3B19C8222C13DD050075893B /* TV_Maze_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C8212C13DD050075893B /* TV_Maze_AppTests.swift */; };
 		3B19C83B2C13DE100075893B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C83A2C13DE100075893B /* AppCoordinator.swift */; };
 		3B19C83F2C13DE3E0075893B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C83E2C13DE3E0075893B /* HomeCoordinator.swift */; };
 		3B19C8432C13DE8F0075893B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C8422C13DE8F0075893B /* HomeViewController.swift */; };
@@ -87,7 +86,6 @@
 		3B19C8132C13DD050075893B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B19C8162C13DD050075893B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B19C81D2C13DD050075893B /* TV Maze AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TV Maze AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B19C8212C13DD050075893B /* TV_Maze_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_Maze_AppTests.swift; sourceTree = "<group>"; };
 		3B19C83A2C13DE100075893B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3B19C83E2C13DE3E0075893B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3B19C8422C13DE8F0075893B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 				3B387B472C160600003077C1 /* Tools */,
 				3BE71E902C15F7E300771C0F /* Data */,
 				3BE71E8D2C15F73100771C0F /* Home */,
-				3B19C8212C13DD050075893B /* TV_Maze_AppTests.swift */,
 			);
 			path = "TV Maze AppTests";
 			sourceTree = "<group>";
@@ -589,7 +586,6 @@
 				3B387B622C1613EF003077C1 /* ShowDetailsCoordinatorSpy.swift in Sources */,
 				3B387B5E2C16133C003077C1 /* ShowDetailsPresenterSpy.swift in Sources */,
 				3B387B4D2C160A48003077C1 /* UINavigationControllerSpy.swift in Sources */,
-				3B19C8222C13DD050075893B /* TV_Maze_AppTests.swift in Sources */,
 				3B387B5A2C161165003077C1 /* HomeConstructorTestCase.swift in Sources */,
 				3B387B6A2C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift in Sources */,
 				3B387B4B2C1606BF003077C1 /* DispatchQueueSpy.swift in Sources */,
