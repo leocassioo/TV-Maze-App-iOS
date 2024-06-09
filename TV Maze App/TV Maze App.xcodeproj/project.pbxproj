@@ -44,6 +44,8 @@
 		3B387B662C161629003077C1 /* ShowDetailsPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B652C161629003077C1 /* ShowDetailsPresenterTestCase.swift */; };
 		3B387B682C1619CC003077C1 /* ShowDetailsViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B672C1619CC003077C1 /* ShowDetailsViewControllerTestCase.swift */; };
 		3B387B6A2C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B692C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift */; };
+		3B387B6C2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B6B2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift */; };
+		3B387B6E2C161E28003077C1 /* ShowDetailsInteractorOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B6D2C161E28003077C1 /* ShowDetailsInteractorOutputSpy.swift */; };
 		3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */; };
 		3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */; };
 		3B9F9BDF2C14C3C6001836A5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */; };
@@ -110,6 +112,8 @@
 		3B387B652C161629003077C1 /* ShowDetailsPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsPresenterTestCase.swift; sourceTree = "<group>"; };
 		3B387B672C1619CC003077C1 /* ShowDetailsViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewControllerTestCase.swift; sourceTree = "<group>"; };
 		3B387B692C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsCoordinatorTestCase.swift; sourceTree = "<group>"; };
+		3B387B6B2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsInteractorTestCase.swift; sourceTree = "<group>"; };
+		3B387B6D2C161E28003077C1 /* ShowDetailsInteractorOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsInteractorOutputSpy.swift; sourceTree = "<group>"; };
 		3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 				3B387B652C161629003077C1 /* ShowDetailsPresenterTestCase.swift */,
 				3B387B672C1619CC003077C1 /* ShowDetailsViewControllerTestCase.swift */,
 				3B387B692C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift */,
+				3B387B6B2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				3B387B5F2C161353003077C1 /* ShowDetailsViewControllerSpy.swift */,
 				3B387B612C1613EF003077C1 /* ShowDetailsCoordinatorSpy.swift */,
 				3B387B632C16140F003077C1 /* ShowDetailsInteractorSpy.swift */,
+				3B387B6D2C161E28003077C1 /* ShowDetailsInteractorOutputSpy.swift */,
 			);
 			path = Spies;
 			sourceTree = "<group>";
@@ -539,12 +545,14 @@
 				3BE71E9B2C15FC2200771C0F /* HomePresenterSpy.swift in Sources */,
 				3B387B512C160C02003077C1 /* ShowTableViewCellSpy.swift in Sources */,
 				3B387B462C160131003077C1 /* HomeTableViewManagerSpy.swift in Sources */,
+				3B387B6E2C161E28003077C1 /* ShowDetailsInteractorOutputSpy.swift in Sources */,
 				3BE71E972C15FB4C00771C0F /* HomeInteractorSpy.swift in Sources */,
 				3B387B662C161629003077C1 /* ShowDetailsPresenterTestCase.swift in Sources */,
 				3B387B642C16140F003077C1 /* ShowDetailsInteractorSpy.swift in Sources */,
 				3B387B582C160FBA003077C1 /* HomeInteractorOutputSpy.swift in Sources */,
 				3BE71E952C15FAAF00771C0F /* HomeViewControllerSpy.swift in Sources */,
 				3B387B682C1619CC003077C1 /* ShowDetailsViewControllerTestCase.swift in Sources */,
+				3B387B6C2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift in Sources */,
 				3B387B542C160E62003077C1 /* NetworkServiceSpy.swift in Sources */,
 				3BE71E992C15FBBD00771C0F /* HomeCoordinatorSpy.swift in Sources */,
 				3B387B602C161353003077C1 /* ShowDetailsViewControllerSpy.swift in Sources */,

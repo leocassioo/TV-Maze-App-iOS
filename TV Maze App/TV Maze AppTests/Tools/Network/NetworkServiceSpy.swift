@@ -15,7 +15,7 @@ final class NetworkServiceSpy: NetworkServiceProtocol {
     }
     
     private(set) var calledMethods: [Method] = []
-    var resultToReturn: Result<[ShowResponse], Error>?
+    var resultToReturn: Any?
     
     func request<T: Decodable>(constructor: NetworkConstructor, completion: @escaping (Result<T, Error>) -> Void) {
         calledMethods.append(.request)
