@@ -52,6 +52,7 @@
 		3B9717022C16546700A864EA /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9717012C16546700A864EA /* InlineSnapshotTesting */; };
 		3B9717042C16546700A864EA /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9717032C16546700A864EA /* SnapshotTesting */; };
 		3B9717072C1659CE00A864EA /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9717062C1659CE00A864EA /* AboutViewController.swift */; };
+		3B97170A2C165F8D00A864EA /* AboutViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9717092C165F8D00A864EA /* AboutViewControllerTestCase.swift */; };
 		3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */; };
 		3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */; };
 		3B9F9BDF2C14C3C6001836A5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */; };
@@ -124,6 +125,7 @@
 		3B9716F72C1647C100A864EA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		3B9716FE2C164E6000A864EA /* ShowStatusTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStatusTestCase.swift; sourceTree = "<group>"; };
 		3B9717062C1659CE00A864EA /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		3B9717092C165F8D00A864EA /* AboutViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerTestCase.swift; sourceTree = "<group>"; };
 		3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		3B19C8202C13DD050075893B /* TV Maze AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B9717082C165F7E00A864EA /* About */,
 				3BE2C8862C16441500AF9B3C /* TV Maze App.xctestplan */,
 				3B387B5B2C1612B9003077C1 /* Details */,
 				3B387B472C160600003077C1 /* Tools */,
@@ -342,6 +345,14 @@
 			isa = PBXGroup;
 			children = (
 				3B9717062C1659CE00A864EA /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		3B9717082C165F7E00A864EA /* About */ = {
+			isa = PBXGroup;
+			children = (
+				3B9717092C165F8D00A864EA /* AboutViewControllerTestCase.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -594,6 +605,7 @@
 				3B387B642C16140F003077C1 /* ShowDetailsInteractorSpy.swift in Sources */,
 				3B387B582C160FBA003077C1 /* HomeInteractorOutputSpy.swift in Sources */,
 				3BE71E952C15FAAF00771C0F /* HomeViewControllerSpy.swift in Sources */,
+				3B97170A2C165F8D00A864EA /* AboutViewControllerTestCase.swift in Sources */,
 				3B387B682C1619CC003077C1 /* ShowDetailsViewControllerTestCase.swift in Sources */,
 				3B387B6C2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift in Sources */,
 				3B387B542C160E62003077C1 /* NetworkServiceSpy.swift in Sources */,
