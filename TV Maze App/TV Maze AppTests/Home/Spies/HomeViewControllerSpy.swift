@@ -20,7 +20,7 @@ final class HomeViewControllerSpy: HomePresenterOutputProtocol {
         calledMethods.append(.showSearchResults)
     }
     
-    func showError(error: any Error) {
+    func showError(message: String) {
         calledMethods.append(.showError)
     }
     

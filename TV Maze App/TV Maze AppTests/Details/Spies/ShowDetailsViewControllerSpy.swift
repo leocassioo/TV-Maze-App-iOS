@@ -15,6 +15,7 @@ final class ShowDetailsViewControllerSpy: ShowDetailsPresenterOutputProtocol {
     enum Method: Equatable {
         case displayShowDetails
         case dispayAliases
+        case displayErrorAlert
     }
     
     private(set) var calledMethods: [Method] = []
@@ -29,5 +30,9 @@ final class ShowDetailsViewControllerSpy: ShowDetailsPresenterOutputProtocol {
     func dispayAliases(aliases: [AliaseModel]) {
         calledMethods.append(.dispayAliases)
         aliasesReceived = aliases
+    }
+    
+    func displayErrorAlert(message: String) {
+        calledMethods.append(.displayErrorAlert)
     }
 }

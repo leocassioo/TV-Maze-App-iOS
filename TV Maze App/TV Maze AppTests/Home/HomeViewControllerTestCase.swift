@@ -77,7 +77,7 @@ final class HomeViewControllerTestCase: XCTestCase {
         let error = NSError(domain: "", code: 0, userInfo: nil)
         
         // When
-        sut.showError(error: error)
+        sut.showError(message: error.localizedDescription)
         
         // Then
         XCTAssertTrue(sut.homeView.skeletonView.isHidden)
