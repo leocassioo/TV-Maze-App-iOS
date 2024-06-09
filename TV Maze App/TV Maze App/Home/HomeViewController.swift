@@ -37,7 +37,12 @@ internal class HomeViewController: UIViewController {
         homeView.tableView.delegate = tableViewManager
         tableViewManager.delegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         configureNavigationBarTitleView()
+        focusSearchBar()
     }
     
     private func configureNavigationBarTitleView() {
@@ -47,6 +52,18 @@ internal class HomeViewController: UIViewController {
         self.navigationItem.titleView = imageView
     }
     
+    private func focusSearchBar() {
+        DispatchQueue.main.async {
+            self.homeView.searchBar.becomeFirstResponder()
+        }
+    }
+    
+    private func hideKeyboard() {
+        DispatchQueue.main.async {
+            self.homeView.searchBar.resignFirstResponder()
+        }
+    }
+    
 }
 
 extension HomeViewController: UISearchBarDelegate {
@@ -54,6 +71,7 @@ extension HomeViewController: UISearchBarDelegate {
         guard let query = searchBar.text else { return }
         showSkeleton()
         presenter.searchByQuery(query: query)
+        hideKeyboard()
     }
 }
 
