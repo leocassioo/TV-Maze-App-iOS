@@ -40,4 +40,3 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
         // error
     }
 }
-

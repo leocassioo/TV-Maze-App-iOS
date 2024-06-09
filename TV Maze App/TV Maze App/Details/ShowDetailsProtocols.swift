@@ -35,11 +35,3 @@ internal protocol ShowDetailsPresenterOutputProtocol: AnyObject {
     func displayShowDetails(viewModel: ShowDetailsViewModel)
     func dispayAliases(aliases: [AliaseModel])
 }
-
-internal struct ShowDetailsViewModel {
-    let title: String
-    let posterURL: String?
-    let summary: String
-    let rating: String
-    let genres: [String?]?
-}

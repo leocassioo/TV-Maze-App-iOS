@@ -29,4 +29,3 @@ public class ShowDetailsCoordinator {
         navigationController.pushViewController(showDetailsController, animated: false)
     }
 }
-

@@ -41,4 +41,3 @@ internal class ShowDetailsInteractor: ShowDetailsInteractorInputProtocol {
         }
     }
 }
-

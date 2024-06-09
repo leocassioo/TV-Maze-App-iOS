@@ -40,4 +40,3 @@ internal class HomeTableViewManager: NSObject, UITableViewDataSource, UITableVie
         delegate?.didSelectedShow(id: id)
     }
 }
-

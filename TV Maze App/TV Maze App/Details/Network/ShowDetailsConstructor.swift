@@ -47,4 +47,3 @@ internal enum ShowDetailsConstructor: NetworkConstructor {
         return nil
     }
 }
-
