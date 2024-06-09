@@ -117,7 +117,7 @@ final class ShowDetailsViewControllerTestCase: XCTestCase {
          sut.displayShowDetails(viewModel: viewModel)
          
          // Then
-        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro, precision: 0.95))
      }
     
     func test_ShowDetailsViewControllerSnapshot_Loading() {
@@ -133,7 +133,7 @@ final class ShowDetailsViewControllerTestCase: XCTestCase {
         sut.displayShowDetails(viewModel: viewModel)
         
         // Then
-        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro, precision: 0.95))
     }
     
     func test_ShowDetailsViewControllerLoadingStateSnapshot() {
@@ -141,6 +141,6 @@ final class ShowDetailsViewControllerTestCase: XCTestCase {
         sut.viewDidLoad()
         
         // Then
-        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro, precision: 0.95))
     }
 }

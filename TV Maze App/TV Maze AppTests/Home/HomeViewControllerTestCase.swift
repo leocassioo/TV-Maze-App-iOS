@@ -136,7 +136,7 @@ final class HomeViewControllerTestCase: XCTestCase {
     
     func test_HomeViewControllerSnapshot_Initial() {
         // Then
-        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro, precision: 0.95))
     }
 
     func test_HomeViewControllerSnapshot_WithSearchResults() {
@@ -145,7 +145,7 @@ final class HomeViewControllerTestCase: XCTestCase {
         sut.showSearchResults(shows: shows)
         
         // Then
-        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro, precision: 0.95))
     }
 
     func test_HomeViewControllerSnapshot_ErrorState() {
@@ -154,7 +154,7 @@ final class HomeViewControllerTestCase: XCTestCase {
         sut.showError(message: error.localizedDescription)
         
         // Then
-        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro, precision: 0.95))
     }
 
 

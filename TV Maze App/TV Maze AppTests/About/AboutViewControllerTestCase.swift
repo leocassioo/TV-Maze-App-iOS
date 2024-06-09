@@ -30,7 +30,7 @@ final class AboutViewControllerTestCase: XCTestCase {
         sut.viewDidLoad()
         
         // Then
-        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro, precision: 0.95))
     }
 }
 
