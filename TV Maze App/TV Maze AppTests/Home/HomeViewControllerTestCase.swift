@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import TV_Maze_App
+import SnapshotTesting
 
 final class HomeViewControllerTestCase: XCTestCase {
     
@@ -22,6 +23,8 @@ final class HomeViewControllerTestCase: XCTestCase {
         dispatchQueueSpy = DispatchQueueSpy()
         sut = HomeViewController(presenter: presenterSpy, tableViewManager: tableViewManagerSpy, mainQueue: dispatchQueueSpy)
         _ = sut.view
+        
+        isRecording = false
     }
     
     override func tearDown() {
@@ -130,5 +133,29 @@ final class HomeViewControllerTestCase: XCTestCase {
         XCTAssertEqual(cell.calledMethods, [.configure])
         XCTAssertEqual(cell.configureShow?.id, shows[0].show?.id)
     }
+    
+    func test_HomeViewControllerSnapshot_Initial() {
+        // Then
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+    }
+
+    func test_HomeViewControllerSnapshot_WithSearchResults() {
+        // Given
+        let shows = [ShowResponse.dummy()]
+        sut.showSearchResults(shows: shows)
+        
+        // Then
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+    }
+
+    func test_HomeViewControllerSnapshot_ErrorState() {
+        // Given
+        let error = NSError(domain: "", code: 0, userInfo: nil)
+        sut.showError(message: error.localizedDescription)
+        
+        // Then
+        assertSnapshot(of: sut, as: .image(on: .iPhone13Pro))
+    }
+
 
 }
