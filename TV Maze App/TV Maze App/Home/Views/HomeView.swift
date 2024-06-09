@@ -12,8 +12,28 @@ internal class HomeView: UIView {
     
     internal let searchBar: UISearchBar = {
         let view = UISearchBar()
+        view.searchBarStyle = .minimal
+        view.barTintColor = .clear
+        view.backgroundImage = UIImage()
+        view.backgroundColor = .tmDarkGray
+        view.placeholder = "Search here..."
+        
+        if let textField = view.value(forKey: "searchField") as? UITextField {
+            textField.textColor = .label
+            textField.tintColor = .label
+            textField.backgroundColor = .systemGray6
+            textField.attributedPlaceholder = NSAttributedString(
+                string: textField.placeholder ?? "",
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.secondaryLabel]
+            )
+            
+            textField.layer.cornerRadius = 10
+            textField.clipsToBounds = true
+        }
+        
         return view
     }()
+    
     internal let tableView: UITableView = {
         let tableView = UITableView()
         return tableView
@@ -40,6 +60,9 @@ internal class HomeView: UIView {
         addSubview(searchBar)
         addSubview(tableView)
         addSubview(skeletonView)
+        
+        backgroundColor = .tmBlack
+        tableView.backgroundColor = .tmBlack
         
         searchBar.text = "papel"
         

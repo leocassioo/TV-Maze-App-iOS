@@ -33,7 +33,7 @@ internal class AppCoordinator {
     private func configureTabBarAppearance() {
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithOpaqueBackground()
-        tabBarAppearance.backgroundColor = .tmWhite
+        tabBarAppearance.backgroundColor = .tmDarkGray
         
         tabBarController.tabBar.standardAppearance = tabBarAppearance
         if #available(iOS 15.0, *) {

@@ -38,7 +38,7 @@ internal class ShowDetailsView: UIView {
     internal let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
-        label.textColor = .white
+        label.textColor = .tmWhite
         label.textAlignment = .center
         label.numberOfLines = 0
         return label
@@ -47,7 +47,7 @@ internal class ShowDetailsView: UIView {
     internal let detailsLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.textColor = .white
+        label.textColor = .tmWhite
         label.textAlignment = .center
         return label
     }()
@@ -62,7 +62,7 @@ internal class ShowDetailsView: UIView {
     internal let aliasesLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.textColor = .white
+        label.textColor = .tmWhite
         label.numberOfLines = 0
         return label
     }()
@@ -77,7 +77,7 @@ internal class ShowDetailsView: UIView {
     internal let ratingLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.textColor = .white
+        label.textColor = .tmWhite
         return label
     }()
     
@@ -92,14 +92,14 @@ internal class ShowDetailsView: UIView {
         let label = UILabel()
         label.text = "Summary"
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        label.textColor = .white
+        label.textColor = .tmWhite
         return label
     }()
     
     internal let summaryLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.textColor = .white
+        label.textColor = .tmWhite
         label.numberOfLines = 0
         return label
     }()

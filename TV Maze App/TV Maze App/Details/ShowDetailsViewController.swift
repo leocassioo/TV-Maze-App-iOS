@@ -8,7 +8,7 @@
 import UIKit
 
 internal class ShowDetailsViewController: UIViewController {
-    private let customView = ShowDetailsView()
+    private let detailView = ShowDetailsView()
     private let presenter: ShowDetailsPresenterInputProtocol
     
     internal init(presenter: ShowDetailsPresenterInputProtocol) {
@@ -22,8 +22,8 @@ internal class ShowDetailsViewController: UIViewController {
     }
     
     internal override func loadView() {
-        self.view = customView
-        self.view.backgroundColor = .black
+        self.view = detailView
+        self.view.backgroundColor = .tmBlack
     }
     
     internal override func viewDidLoad() {
@@ -42,7 +42,7 @@ internal class ShowDetailsViewController: UIViewController {
         backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         backButton.tintColor = .white
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
-        customView.addSubview(backButton)
+        detailView.addSubview(backButton)
         backButton.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
             make.leading.equalToSuperview().offset(10)
@@ -63,16 +63,16 @@ internal class ShowDetailsViewController: UIViewController {
 extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
     internal func displayShowDetails(viewModel: ShowDetailsViewModel) {
         DispatchQueue.main.async {
-            self.customView.titleLabel.text = viewModel.title
-            self.customView.ratingLabel.text = viewModel.rating
+            self.detailView.titleLabel.text = viewModel.title
+            self.detailView.ratingLabel.text = viewModel.rating
             
-            self.customView.configureSummary(with: viewModel.summary)
+            self.detailView.configureSummary(with: viewModel.summary)
             
             if let imageUrl = viewModel.posterURL, let url = URL(string: imageUrl) {
                 DispatchQueue.global().async {
                     if let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
                         DispatchQueue.main.async {
-                            self.customView.configureImage(with: image)
+                            self.detailView.configureImage(with: image)
                         }
                     }
                 }
@@ -82,7 +82,7 @@ extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
     
     internal func dispayAliases(aliases: [AliaseModel]) {
         DispatchQueue.main.async {
-            self.customView.configureAliases(with: aliases)
+            self.detailView.configureAliases(with: aliases)
         }
     }
 }

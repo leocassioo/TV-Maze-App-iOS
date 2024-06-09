@@ -22,9 +22,9 @@ class SkeletonView: UIView {
     
     private func setup() {
         gradientLayer.colors = [
-            UIColor.systemGray5.cgColor,
-            UIColor.systemGray6.cgColor,
-            UIColor.systemGray5.cgColor
+            UIColor.systemGray2.cgColor,
+            UIColor.systemGray4.cgColor,
+            UIColor.systemGray2.cgColor
         ]
         gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)

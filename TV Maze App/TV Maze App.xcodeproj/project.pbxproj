@@ -140,11 +140,11 @@
 		3B19C8092C13DD030075893B /* TV Maze App */ = {
 			isa = PBXGroup;
 			children = (
+				3B19C8412C13DE670075893B /* Home */,
 				3B9F9BDD2C14C3B7001836A5 /* Details */,
 				3B19C80A2C13DD030075893B /* AppDelegate.swift */,
 				3B19C83A2C13DE100075893B /* AppCoordinator.swift */,
 				3B19C8152C13DD050075893B /* LaunchScreen.storyboard */,
-				3B19C8412C13DE670075893B /* Home */,
 				3B19C8402C13DE5A0075893B /* Assets */,
 				3B19C8562C13EC180075893B /* Tools */,
 			);

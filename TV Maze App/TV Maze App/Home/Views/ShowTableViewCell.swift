@@ -15,6 +15,7 @@ internal class ShowTableViewCell: UITableViewCell {
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.textColor = .tmWhite
         label.numberOfLines = 0
         return label
     }()
@@ -89,6 +90,9 @@ internal class ShowTableViewCell: UITableViewCell {
         contentView.addSubview(stackView)
         contentView.addSubview(arrowImageView)
         contentView.addSubview(skeletonView)
+        
+        contentView.backgroundColor = .tmBlack
+        backgroundColor = .tmBlack
         
         stackView.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(10)

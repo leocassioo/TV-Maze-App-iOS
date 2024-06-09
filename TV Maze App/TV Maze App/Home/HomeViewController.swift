@@ -26,6 +26,7 @@ internal class HomeViewController: UIViewController {
     
     internal override func loadView() {
         self.view = homeView
+        self.view.backgroundColor = .tmBlack
     }
     
     internal override func viewDidLoad() {
