@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:TV Maze App.xctestplan"
+            reference = "container:TV Maze AppTests/TV Maze App.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

@@ -21,7 +21,7 @@ internal class ShowDetailsInteractor: ShowDetailsInteractorInputProtocol {
     internal func fetchShowDetails() {
         let constructor = ShowDetailsConstructor.showDetails(id: showId)
         
-        networkService.request(constructor: constructor) { (result: Result<Show, Error>) in
+        networkService.request(constructor: constructor) { (result: Result<Show?, Error>) in
             switch result {
             case .success(let show):
                 self.output?.didFetchShowDetails(showDetails: show)
@@ -34,7 +34,7 @@ internal class ShowDetailsInteractor: ShowDetailsInteractorInputProtocol {
     internal func fetchAliases() {
         let constructor = ShowDetailsConstructor.aliases(id: showId)
         
-        networkService.request(constructor: constructor) { (result: Result<[AliaseModel], Error>) in
+        networkService.request(constructor: constructor) { (result: Result<[AliaseModel]?, Error>) in
             switch result {
             case .success(let aliases):
                 self.output?.didFetchAliases(aliases: aliases)

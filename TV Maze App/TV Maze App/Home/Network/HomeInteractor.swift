@@ -18,7 +18,7 @@ internal class HomeInteractor: HomeInteractorInputProtocol {
     internal func searchByQuery(query: String?) {
         let constructor = HomeConstructor.search(query: query)
         
-        networkService.request(constructor: constructor) { (result: Result<[ShowResponse], Error>) in
+        networkService.request(constructor: constructor) { (result: Result<[ShowResponse]?, Error>) in
             switch result {
             case .success(let shows):
                 self.output?.searchByQueryWithSuccess(shows: shows)

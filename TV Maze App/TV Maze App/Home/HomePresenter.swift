@@ -23,7 +23,8 @@ internal class HomePresenter: HomePresenterInputProtocol {
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
-    func searchByQueryWithSuccess(shows: [ShowResponse]) {
+    func searchByQueryWithSuccess(shows: [ShowResponse]?) {
+        guard let shows else { return }
         view?.showSearchResults(shows: shows)
     }
     

@@ -37,6 +37,6 @@ internal protocol HomeInteractorInputProtocol: AnyObject {
 // MARK: - Interactor -> Presenter
 internal protocol HomeInteractorOutputProtocol: AnyObject {
     
-    func searchByQueryWithSuccess(shows: [ShowResponse])
+    func searchByQueryWithSuccess(shows: [ShowResponse]?)
     func searchByQueryFailure(error: Error)
 }

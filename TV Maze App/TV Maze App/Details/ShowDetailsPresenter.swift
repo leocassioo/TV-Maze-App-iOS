@@ -17,13 +17,13 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
         interactor?.fetchAliases()
     }
     
-    internal func didFetchShowDetails(showDetails: Show) {
+    internal func didFetchShowDetails(showDetails: Show?) {
         let viewModel = ShowDetailsViewModel(
-            title: showDetails.name ?? "No Title",
-            posterURL: showDetails.image?.original,
-            summary: showDetails.summary ?? "No Summary",
-            rating: "\(showDetails.rating?.average ?? 0.0)",
-            genres: showDetails.genres
+            title: showDetails?.name ?? "No Title",
+            posterURL: showDetails?.image?.original,
+            summary: showDetails?.summary ?? "No Summary",
+            rating: "\(showDetails?.rating?.average ?? 0.0)",
+            genres: showDetails?.genres
         )
         view?.displayShowDetails(viewModel: viewModel)
     }
@@ -32,7 +32,8 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
         // error
     }
     
-    func didFetchAliases(aliases: [AliaseModel]) {
+    func didFetchAliases(aliases: [AliaseModel]?) {
+        guard let aliases else { return }
         view?.dispayAliases(aliases: aliases)
     }
     

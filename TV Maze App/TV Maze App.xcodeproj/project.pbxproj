@@ -46,6 +46,8 @@
 		3B387B6A2C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B692C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift */; };
 		3B387B6C2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B6B2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift */; };
 		3B387B6E2C161E28003077C1 /* ShowDetailsInteractorOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B6D2C161E28003077C1 /* ShowDetailsInteractorOutputSpy.swift */; };
+		3B9716F52C16470500A864EA /* ShowDetailsConstructorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9716F42C16470500A864EA /* ShowDetailsConstructorTestCase.swift */; };
+		3B9716F82C1647C100A864EA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9716F72C1647C100A864EA /* ApiConstants.swift */; };
 		3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */; };
 		3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */; };
 		3B9F9BDF2C14C3C6001836A5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */; };
@@ -114,6 +116,8 @@
 		3B387B692C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsCoordinatorTestCase.swift; sourceTree = "<group>"; };
 		3B387B6B2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsInteractorTestCase.swift; sourceTree = "<group>"; };
 		3B387B6D2C161E28003077C1 /* ShowDetailsInteractorOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsInteractorOutputSpy.swift; sourceTree = "<group>"; };
+		3B9716F42C16470500A864EA /* ShowDetailsConstructorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsConstructorTestCase.swift; sourceTree = "<group>"; };
+		3B9716F72C1647C100A864EA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
@@ -170,7 +174,6 @@
 		3B19C7FE2C13DD030075893B = {
 			isa = PBXGroup;
 			children = (
-				3BE2C8862C16441500AF9B3C /* TV Maze App.xctestplan */,
 				3B19C8092C13DD030075893B /* TV Maze App */,
 				3B19C8202C13DD050075893B /* TV Maze AppTests */,
 				3B19C8082C13DD030075893B /* Products */,
@@ -189,6 +192,7 @@
 		3B19C8092C13DD030075893B /* TV Maze App */ = {
 			isa = PBXGroup;
 			children = (
+				3B9716F62C1647AB00A864EA /* Statics */,
 				3B19C8412C13DE670075893B /* Home */,
 				3B9F9BDD2C14C3B7001836A5 /* Details */,
 				3B9F9BD92C14B940001836A5 /* Data */,
@@ -204,6 +208,7 @@
 		3B19C8202C13DD050075893B /* TV Maze AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3BE2C8862C16441500AF9B3C /* TV Maze App.xctestplan */,
 				3B387B5B2C1612B9003077C1 /* Details */,
 				3B387B472C160600003077C1 /* Tools */,
 				3BE71E902C15F7E300771C0F /* Data */,
@@ -299,6 +304,7 @@
 				3B387B672C1619CC003077C1 /* ShowDetailsViewControllerTestCase.swift */,
 				3B387B692C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift */,
 				3B387B6B2C161DF4003077C1 /* ShowDetailsInteractorTestCase.swift */,
+				3B9716F42C16470500A864EA /* ShowDetailsConstructorTestCase.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -313,6 +319,14 @@
 				3B387B6D2C161E28003077C1 /* ShowDetailsInteractorOutputSpy.swift */,
 			);
 			path = Spies;
+			sourceTree = "<group>";
+		};
+		3B9716F62C1647AB00A864EA /* Statics */ = {
+			isa = PBXGroup;
+			children = (
+				3B9716F72C1647C100A864EA /* ApiConstants.swift */,
+			);
+			path = Statics;
 			sourceTree = "<group>";
 		};
 		3B9F9BD62C14B1DA001836A5 /* Color */ = {
@@ -517,6 +531,7 @@
 				3B19C8472C13DEBF0075893B /* HomeInteractor.swift in Sources */,
 				3B9F9BE32C14C416001836A5 /* ShowDetailsInteractor.swift in Sources */,
 				3B19C8552C13EA750075893B /* HomeProtocols.swift in Sources */,
+				3B9716F82C1647C100A864EA /* ApiConstants.swift in Sources */,
 				3B9F9BE52C14C429001836A5 /* ShowDetailsPresenter.swift in Sources */,
 				3B19C8492C13DED50075893B /* HomePresenter.swift in Sources */,
 				3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */,
@@ -544,6 +559,7 @@
 				3B387B6A2C161CC5003077C1 /* ShowDetailsCoordinatorTestCase.swift in Sources */,
 				3B387B4B2C1606BF003077C1 /* DispatchQueueSpy.swift in Sources */,
 				3B387B562C160F87003077C1 /* HomeInteractorTestCase.swift in Sources */,
+				3B9716F52C16470500A864EA /* ShowDetailsConstructorTestCase.swift in Sources */,
 				3BE71E9B2C15FC2200771C0F /* HomePresenterSpy.swift in Sources */,
 				3B387B512C160C02003077C1 /* ShowTableViewCellSpy.swift in Sources */,
 				3B387B462C160131003077C1 /* HomeTableViewManagerSpy.swift in Sources */,

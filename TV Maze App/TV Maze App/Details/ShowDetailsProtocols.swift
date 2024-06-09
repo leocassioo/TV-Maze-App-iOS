@@ -21,10 +21,10 @@ internal protocol ShowDetailsInteractorInputProtocol: AnyObject {
 
 // MARK: - Interactor -> Presenter
 internal protocol ShowDetailsInteractorOutputProtocol: AnyObject {
-    func didFetchShowDetails(showDetails: Show)
+    func didFetchShowDetails(showDetails: Show?)
     func didFailToFetchShowDetails(with: Error)
     
-    func didFetchAliases(aliases: [AliaseModel])
+    func didFetchAliases(aliases: [AliaseModel]?)
     func didFailToFetchAliases(with: Error)
 }
 
