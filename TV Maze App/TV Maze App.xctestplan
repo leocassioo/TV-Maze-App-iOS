@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "56AA5C6F-6311-4D0A-9129-5F74C90AF1EE",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TV Maze App.xcodeproj",
+      "identifier" : "3B19C8062C13DD030075893B",
+      "name" : "TV Maze App"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TV Maze App.xcodeproj",
+        "identifier" : "3B19C81C2C13DD050075893B",
+        "name" : "TV Maze AppTests"
+      }
+    }
+  ],
+  "version" : 1
+}

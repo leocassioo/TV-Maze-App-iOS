@@ -18,7 +18,6 @@ internal protocol DispatchQueueProtocol {
                     qos: DispatchQoS,
                     flags: DispatchWorkItemFlags,
                     execute work: @escaping @convention(block) () -> Void)
-    
 }
 
 extension DispatchQueueProtocol {
@@ -36,7 +35,6 @@ extension DispatchQueueProtocol {
                              execute work: @escaping @convention(block) () -> Void) {
         asyncAfter(deadline: deadline, qos: qos, flags: flags, execute: work)
     }
-    
 }
 
 extension DispatchQueue: DispatchQueueProtocol { }

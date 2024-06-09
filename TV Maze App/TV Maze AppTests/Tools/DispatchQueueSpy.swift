@@ -17,14 +17,19 @@ final class DispatchQueueSpy: DispatchQueueProtocol {
     
     private(set) var calledMethods: [Method] = []
     
-    func async(execute work: @escaping () -> Void) {
+    func async(group: DispatchGroup? = nil,
+               qos: DispatchQoS = .unspecified,
+               flags: DispatchWorkItemFlags = [],
+               execute work: @escaping @convention(block) () -> Void) {
         calledMethods.append(.async)
         work()
     }
     
-    func asyncAfter(deadline: DispatchTime, execute work: @escaping () -> Void) {
+    func asyncAfter(deadline: DispatchTime,
+                    qos: DispatchQoS = .unspecified,
+                    flags: DispatchWorkItemFlags = [],
+                    execute work: @escaping @convention(block) () -> Void) {
         calledMethods.append(.asyncAfter)
         work()
     }
 }
-
