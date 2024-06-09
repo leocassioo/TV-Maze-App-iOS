@@ -7,6 +7,11 @@
 
 import Foundation
 
+// MARK: - Coordinator
+internal protocol ShowDetailsCoordinatorProtocol: Any {
+    var showId: Int { get set }
+}
+
 // MARK: - Presenter -> Interactor
 internal protocol ShowDetailsInteractorInputProtocol: AnyObject {
     var output: ShowDetailsInteractorOutputProtocol? { get set }

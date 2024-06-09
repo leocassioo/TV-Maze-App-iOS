@@ -7,9 +7,9 @@
 
 import UIKit
 
-public class ShowDetailsCoordinator {
+public class ShowDetailsCoordinator: ShowDetailsCoordinatorProtocol {
     private let navigationController: UINavigationController
-    private let showId: Int
+    internal var showId: Int
     
     public init(navigationController: UINavigationController, showId: Int) {
         self.navigationController = navigationController
