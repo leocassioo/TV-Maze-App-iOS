@@ -18,7 +18,7 @@ final class ShowDetailsInteractorOutputSpy: ShowDetailsInteractorOutputProtocol 
     
     private(set) var calledMethods: [Method] = []
     
-    func didFetchShowDetails(showDetails: Show) {
+    func didFetchShowDetails(showDetails: Show?) {
         calledMethods.append(.didFetchShowDetails)
     }
     
@@ -26,7 +26,7 @@ final class ShowDetailsInteractorOutputSpy: ShowDetailsInteractorOutputProtocol 
         calledMethods.append(.didFailToFetchShowDetails)
     }
     
-    func didFetchAliases(aliases: [AliaseModel]) {
+    func didFetchAliases(aliases: [AliaseModel]?) {
         calledMethods.append(.didFetchAliases)
     }
     

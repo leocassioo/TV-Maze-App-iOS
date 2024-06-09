@@ -44,7 +44,7 @@ final class HomeInteractorTestCase: XCTestCase {
         // Given
         let query = "test"
         let shows = [ShowResponse.dummy()]
-        networkServiceSpy.resultToReturn = Result<[ShowResponse], Error>.success(shows)
+        networkServiceSpy.resultToReturn = Result<[ShowResponse]?, Error>.success(shows)
         
         // When
         sut.searchByQuery(query: query)
@@ -58,7 +58,7 @@ final class HomeInteractorTestCase: XCTestCase {
         // Given
         let query = "test"
         let error = NSError(domain: "", code: 0, userInfo: nil)
-        networkServiceSpy.resultToReturn = Result<[ShowResponse], Error>.failure(error)
+        networkServiceSpy.resultToReturn = Result<[ShowResponse]?, Error>.failure(error)
         
         // When
         sut.searchByQuery(query: query)

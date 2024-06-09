@@ -32,7 +32,7 @@ final class ShowDetailsInteractorTestCase: XCTestCase {
     func test_fetchShowDetails_Success() {
         // Given
         let show = Show.dummy()
-        networkServiceSpy.resultToReturn = Result<Show, Error>.success(show)
+        networkServiceSpy.resultToReturn = Result<Show?, Error>.success(show)
         
         // When
         sut.fetchShowDetails()
@@ -45,7 +45,7 @@ final class ShowDetailsInteractorTestCase: XCTestCase {
     func test_fetchShowDetails_Failure() {
         // Given
         let error = NSError(domain: "Test", code: 1, userInfo: nil)
-        networkServiceSpy.resultToReturn = Result<Show, Error>.failure(error)
+        networkServiceSpy.resultToReturn = Result<Show?, Error>.failure(error)
         
         // When
         sut.fetchShowDetails()
@@ -58,7 +58,7 @@ final class ShowDetailsInteractorTestCase: XCTestCase {
     func test_fetchAliases_Success() {
         // Given
         let aliases = [AliaseModel(name: "Alias1", country: nil)]
-        networkServiceSpy.resultToReturn = Result<[AliaseModel], Error>.success(aliases)
+        networkServiceSpy.resultToReturn = Result<[AliaseModel]?, Error>.success(aliases)
         
         // When
         sut.fetchAliases()
@@ -71,7 +71,7 @@ final class ShowDetailsInteractorTestCase: XCTestCase {
     func test_fetchAliases_Failure() {
         // Given
         let error = NSError(domain: "Test", code: 1, userInfo: nil)
-        networkServiceSpy.resultToReturn = Result<[AliaseModel], Error>.failure(error)
+        networkServiceSpy.resultToReturn = Result<[AliaseModel]?, Error>.failure(error)
         
         // When
         sut.fetchAliases()

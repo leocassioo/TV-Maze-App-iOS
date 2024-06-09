@@ -20,7 +20,7 @@ final class HomeInteractorOutputSpy: HomeInteractorOutputProtocol {
     private(set) var showsReceived: [ShowResponse]?
     private(set) var errorReceived: Error?
     
-    func searchByQueryWithSuccess(shows: [ShowResponse]) {
+    func searchByQueryWithSuccess(shows: [ShowResponse]?) {
         calledMethods.append(.searchByQueryWithSuccess)
         showsReceived = shows
     }
