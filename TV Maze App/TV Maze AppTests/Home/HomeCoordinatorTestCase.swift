@@ -8,7 +8,7 @@
 import XCTest
 @testable import TV_Maze_App
 
-final class HomeCoordinatorTests: XCTestCase {
+final class HomeCoordinatorTestCase: XCTestCase {
     
     var sut: HomeCoordinator!
     var navigationControllerSpy: UINavigationControllerSpy!

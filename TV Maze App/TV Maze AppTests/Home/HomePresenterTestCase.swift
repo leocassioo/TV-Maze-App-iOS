@@ -8,7 +8,7 @@
 import XCTest
 @testable import TV_Maze_App
 
-final class HomePresenterTests: XCTestCase {
+final class HomePresenterTestCase: XCTestCase {
     
     var sut: HomePresenter!
     var viewSpy: HomeViewControllerSpy!
