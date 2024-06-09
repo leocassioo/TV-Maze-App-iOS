@@ -43,7 +43,7 @@ final class HomeCoordinatorTestCase: XCTestCase {
         sut.navigateToDetailsById(id: showId)
         
         // Then
-        XCTAssertEqual(navigationControllerSpy.pushViewControllerCalled, true)
+        XCTAssertEqual(navigationControllerSpy.calledMethods, [.pushViewController])
         XCTAssertEqual(navigationControllerSpy.viewControllers.count, 2)
         XCTAssertTrue(navigationControllerSpy.viewControllers.last is ShowDetailsViewController)
     }

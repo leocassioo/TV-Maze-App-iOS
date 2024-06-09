@@ -10,9 +10,14 @@ import UIKit
 
 final class UINavigationControllerSpy: UINavigationController {
     
-    private(set) var pushViewControllerCalled = false
+    enum Method: Equatable {
+        case pushViewController
+    }
+    
+    private(set) var calledMethods: [Method] = []
+    
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        calledMethods.append(.pushViewController)
         super.pushViewController(viewController, animated: animated)
-        pushViewControllerCalled = true
     }
 }
