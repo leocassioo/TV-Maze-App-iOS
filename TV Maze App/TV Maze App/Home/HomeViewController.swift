@@ -8,14 +8,18 @@
 import UIKit
 
 internal class HomeViewController: UIViewController {
-    private let homeView: HomeView
+    internal let homeView: HomeView
     private let presenter: HomePresenterInputProtocol
-    private let tableViewManager: HomeTableViewManager
+    internal let tableViewManager: HomeTableViewManager
+    private let mainQueue: DispatchQueueProtocol
     
-    internal init(presenter: HomePresenterInputProtocol) {
+    internal init(presenter: HomePresenterInputProtocol,
+                  tableViewManager: HomeTableViewManager = HomeTableViewManager(),
+                  mainQueue: DispatchQueueProtocol = DispatchQueue.main) {
         self.homeView = HomeView()
         self.presenter = presenter
-        self.tableViewManager = HomeTableViewManager()
+        self.tableViewManager = tableViewManager
+        self.mainQueue = mainQueue
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -52,14 +56,14 @@ internal class HomeViewController: UIViewController {
         self.navigationItem.titleView = imageView
     }
     
-    private func focusSearchBar() {
-        DispatchQueue.main.async {
+    internal func focusSearchBar() {
+        mainQueue.async {
             self.homeView.searchBar.becomeFirstResponder()
         }
     }
     
-    private func hideKeyboard() {
-        DispatchQueue.main.async {
+    internal func hideKeyboard() {
+        mainQueue.async {
             self.homeView.searchBar.resignFirstResponder()
         }
     }
@@ -77,7 +81,7 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController: HomePresenterOutputProtocol {
     public func showSearchResults(shows: [ShowResponse]) {
-        DispatchQueue.main.async {
+        mainQueue.async {
             self.tableViewManager.update(with: shows)
             self.homeView.tableView.reloadData()
             self.hideSkeleton()
@@ -85,7 +89,7 @@ extension HomeViewController: HomePresenterOutputProtocol {
     }
     
     public func showError(error: Error) {
-        DispatchQueue.main.async {
+        mainQueue.async {
             // error
             self.hideSkeleton()
         }
