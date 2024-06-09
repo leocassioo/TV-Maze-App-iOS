@@ -8,7 +8,7 @@
 import UIKit
 
 internal class ShowDetailsViewController: UIViewController {
-    private let detailView = ShowDetailsView()
+    internal let detailView = ShowDetailsView()
     private let presenter: ShowDetailsPresenterInputProtocol
     private let mainQueue: DispatchQueueProtocol
     
@@ -54,7 +54,7 @@ internal class ShowDetailsViewController: UIViewController {
         }
     }
     
-    @objc private func backButtonTapped() {
+    @objc internal func backButtonTapped() {
         navigationController?.popViewController(animated: true)
     }
     
