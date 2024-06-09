@@ -33,6 +33,7 @@
 		3B387B4B2C1606BF003077C1 /* DispatchQueueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B4A2C1606BF003077C1 /* DispatchQueueSpy.swift */; };
 		3B387B4D2C160A48003077C1 /* UINavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B4C2C160A48003077C1 /* UINavigationControllerSpy.swift */; };
 		3B387B4F2C160A7C003077C1 /* HomeCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B4E2C160A7C003077C1 /* HomeCoordinatorTestCase.swift */; };
+		3B387B512C160C02003077C1 /* ShowTableViewCellSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B502C160C02003077C1 /* ShowTableViewCellSpy.swift */; };
 		3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */; };
 		3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */; };
 		3B9F9BDF2C14C3C6001836A5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */; };
@@ -88,6 +89,7 @@
 		3B387B4A2C1606BF003077C1 /* DispatchQueueSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueSpy.swift; sourceTree = "<group>"; };
 		3B387B4C2C160A48003077C1 /* UINavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpy.swift; sourceTree = "<group>"; };
 		3B387B4E2C160A7C003077C1 /* HomeCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTestCase.swift; sourceTree = "<group>"; };
+		3B387B502C160C02003077C1 /* ShowTableViewCellSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewCellSpy.swift; sourceTree = "<group>"; };
 		3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				3BE71E982C15FBBD00771C0F /* HomeCoordinatorSpy.swift */,
 				3BE71E9A2C15FC2200771C0F /* HomePresenterSpy.swift */,
 				3B387B452C160131003077C1 /* HomeTableViewManagerSpy.swift */,
+				3B387B502C160C02003077C1 /* ShowTableViewCellSpy.swift */,
 			);
 			path = Spy;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				3B19C8222C13DD050075893B /* TV_Maze_AppTests.swift in Sources */,
 				3B387B4B2C1606BF003077C1 /* DispatchQueueSpy.swift in Sources */,
 				3BE71E9B2C15FC2200771C0F /* HomePresenterSpy.swift in Sources */,
+				3B387B512C160C02003077C1 /* ShowTableViewCellSpy.swift in Sources */,
 				3B387B462C160131003077C1 /* HomeTableViewManagerSpy.swift in Sources */,
 				3BE71E972C15FB4C00771C0F /* HomeInteractorSpy.swift in Sources */,
 				3BE71E952C15FAAF00771C0F /* HomeViewControllerSpy.swift in Sources */,

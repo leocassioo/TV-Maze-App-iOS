@@ -112,4 +112,23 @@ final class HomeViewControllerTests: XCTestCase {
         // Then
         XCTAssertEqual(dispatchQueueSpy.calledMethods, [.async])
     }
+    
+    func test_cellForRowAt_ConfiguresCellWithShow() {
+        // Given
+        let shows = [ShowResponse.dummy()]
+        tableViewManagerSpy.update(with: shows)
+        sut.homeView.tableView.reloadData()
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        
+        sut.homeView.tableView.register(ShowTableViewCellSpy.self, forCellReuseIdentifier: ShowTableViewCell.identifier)
+        
+        // When
+        let cell = sut.tableViewManager.tableView(sut.homeView.tableView, cellForRowAt: indexPath) as! ShowTableViewCellSpy
+        
+        // Then
+        XCTAssertEqual(cell.calledMethods, [.configure])
+        XCTAssertEqual(cell.configureShow?.id, shows[0].show?.id)
+    }
+
 }

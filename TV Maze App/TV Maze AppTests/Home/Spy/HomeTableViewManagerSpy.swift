@@ -31,6 +31,7 @@ final class HomeTableViewManagerSpy: HomeTableViewManager {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        super.update(with: shows)
         calledMethods.append(.tableViewCellForRowAt)
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         return cell
