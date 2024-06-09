@@ -41,4 +41,5 @@ internal struct ShowDetailsViewModel {
     let posterURL: String?
     let summary: String
     let rating: String
+    let genres: [String?]?
 }

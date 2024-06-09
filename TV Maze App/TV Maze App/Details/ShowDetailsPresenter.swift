@@ -22,7 +22,8 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
             title: showDetails.name ?? "No Title",
             posterURL: showDetails.image?.original,
             summary: showDetails.summary ?? "No Summary",
-            rating: "\(showDetails.rating?.average ?? 0.0)"
+            rating: "\(showDetails.rating?.average ?? 0.0)",
+            genres: showDetails.genres
         )
         view?.displayShowDetails(viewModel: viewModel)
     }

@@ -67,6 +67,7 @@ extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
             self.detailView.ratingLabel.text = viewModel.rating
             
             self.detailView.configureSummary(with: viewModel.summary)
+            self.detailView.configGenres(genres: viewModel.genres)
             
             if let imageUrl = viewModel.posterURL, let url = URL(string: imageUrl) {
                 DispatchQueue.global().async {

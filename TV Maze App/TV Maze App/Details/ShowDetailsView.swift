@@ -51,6 +51,15 @@ internal class ShowDetailsView: UIView {
         label.textAlignment = .center
         return label
     }()
+
+    internal let genresStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 5
+        stackView.distribution = .fill
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
     
     internal let aliasesStackView: UIStackView = {
         let stackView = UIStackView()
@@ -123,6 +132,7 @@ internal class ShowDetailsView: UIView {
         stackView.addArrangedSubview(posterImageView)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(detailsLabel)
+        stackView.addArrangedSubview(genresStackView)
         stackView.addArrangedSubview(aliasesStackView)
         stackView.addArrangedSubview(ratingStackView)
         stackView.addArrangedSubview(summaryTitleLabel)
@@ -185,6 +195,26 @@ internal class ShowDetailsView: UIView {
         guard !aliases.isEmpty else { return }
         let aliasesText = aliases.map { $0.name }.joined(separator: ", ")
         aliasesLabel.text = "Also known as: \(aliasesText)"
+    }
+    
+    internal func configGenres(genres: [String?]?) {
+        guard let genres = genres?.compactMap({ $0 }), !genres.isEmpty else { return }
+        
+        genresStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        for genre in genres {
+            let genreLabel = UILabel()
+            genreLabel.text = genre
+            genreLabel.backgroundColor = .tmDarkGreen
+            genreLabel.textColor = .tmWhite
+            genreLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+            genreLabel.textAlignment = .center
+            genreLabel.layer.cornerRadius = 4
+            genreLabel.layer.masksToBounds = true
+            genreLabel.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+            
+            genresStackView.addArrangedSubview(genreLabel)
+        }
     }
 
 }
