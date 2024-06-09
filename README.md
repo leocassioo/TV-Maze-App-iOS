@@ -62,6 +62,6 @@ Há potencial para melhorias no projeto, incluindo a exibição de detalhes mais
 
 ## Contato
 
-- **Telefone**: [Clique aqui para ligar](tel:+5531983558266) - (31) 98355-8266
-- **Email**: [Clique aqui para enviar um email](mailto:leocassio.af@gmail.com) - leocassio.af@gmail.com
+- **Telefone**: (31) 98355-8266
+- **Email**: [leocassio.af@gmail.com](mailto:leocassio.af@gmail.com)
 - **LinkedIn**: [Perfil no LinkedIn](https://www.linkedin.com/in/leocassioo) - https://www.linkedin.com/in/leocassioo
