@@ -20,7 +20,7 @@ internal protocol ShowDetailsInteractorOutputProtocol: AnyObject {
     func didFailToFetchShowDetails(with: Error)
     
     func didFetchAliases(aliases: [AliaseModel])
-    func didFailToFetchAliasese(with: Error)
+    func didFailToFetchAliases(with: Error)
 }
 
 // MARK: - View -> Presenter

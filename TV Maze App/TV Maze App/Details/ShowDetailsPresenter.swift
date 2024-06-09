@@ -36,7 +36,7 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
         view?.dispayAliases(aliases: aliases)
     }
     
-    func didFailToFetchAliasese(with: any Error) {
+    func didFailToFetchAliases(with: any Error) {
         // error
     }
 }

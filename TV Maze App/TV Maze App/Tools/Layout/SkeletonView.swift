@@ -7,15 +7,15 @@
 
 import UIKit
 
-class SkeletonView: UIView {
+internal class SkeletonView: UIView {
     private let gradientLayer = CAGradientLayer()
     
-    override init(frame: CGRect) {
+    internal override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-    required init?(coder: NSCoder) {
+    internal required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
@@ -39,7 +39,7 @@ class SkeletonView: UIView {
         gradientLayer.add(animation, forKey: "shimmer")
     }
     
-    override func layoutSubviews() {
+    internal override func layoutSubviews() {
         super.layoutSubviews()
         gradientLayer.frame = bounds
     }

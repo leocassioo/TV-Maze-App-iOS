@@ -51,7 +51,7 @@ internal class ShowDetailsView: UIView {
         label.textAlignment = .center
         return label
     }()
-
+    
     internal let genresStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -113,6 +113,12 @@ internal class ShowDetailsView: UIView {
         return label
     }()
     
+    internal let skeletonView: SkeletonView = {
+        let view = SkeletonView()
+        view.isHidden = true
+        return view
+    }()
+    
     internal override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -126,6 +132,7 @@ internal class ShowDetailsView: UIView {
     
     private func setupViews() {
         addSubview(scrollView)
+        addSubview(skeletonView)
         scrollView.addSubview(contentView)
         contentView.addSubview(stackView)
         
@@ -161,6 +168,10 @@ internal class ShowDetailsView: UIView {
         
         starImageView.snp.makeConstraints { make in
             make.size.equalTo(24)
+        }
+        
+        skeletonView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
     }
     
@@ -216,5 +227,12 @@ internal class ShowDetailsView: UIView {
             genresStackView.addArrangedSubview(genreLabel)
         }
     }
-
+    
+    internal func showLoading() {
+        skeletonView.isHidden = false
+    }
+    
+    internal func hideLoading() {
+        skeletonView.isHidden = true
+    }
 }

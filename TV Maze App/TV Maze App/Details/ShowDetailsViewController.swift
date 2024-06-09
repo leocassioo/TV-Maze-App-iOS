@@ -29,6 +29,7 @@ internal class ShowDetailsViewController: UIViewController {
     internal override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        detailView.showLoading()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,9 +75,12 @@ extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
                     if let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
                         DispatchQueue.main.async {
                             self.detailView.configureImage(with: image)
+                            self.detailView.hideLoading()
                         }
                     }
                 }
+            } else {
+                self.detailView.hideLoading()
             }
         }
     }

@@ -36,7 +36,7 @@ internal class ShowDetailsInteractor: ShowDetailsInteractorInputProtocol {
             case .success(let aliases):
                 self.output?.didFetchAliases(aliases: aliases)
             case .failure(let error):
-                self.output?.didFailToFetchAliasese(with: error)
+                self.output?.didFailToFetchAliases(with: error)
             }
         }
     }
