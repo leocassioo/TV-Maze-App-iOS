@@ -65,3 +65,20 @@ Há potencial para melhorias no projeto, incluindo a exibição de detalhes mais
 - **Telefone**: (31) 98355-8266
 - **Email**: [leocassio.af@gmail.com](mailto:leocassio.af@gmail.com)
 - **LinkedIn**: [Perfil no LinkedIn](https://www.linkedin.com/in/leocassioo) - https://www.linkedin.com/in/leocassioo
+
+## Adicionais
+**Funcionamento**: https://drive.google.com/file/d/1Qaq-HYEgcvV_yRGQzDivbyYCOtDk_SKW/view?usp=sharing
+
+![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/b465b677-dd7f-4192-9f05-25880a2e12c9)
+![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/aef0b35d-3540-4a27-847a-88085012f8b3)
+![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/9b5ad0fc-1194-4d13-809b-cbd27dc053d3)
+
+
+**Cobertura de testes**:
+
+![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/e7dd0773-c98c-4122-9221-5229e39e64df)
+
+**Cobertura de testes de view**: esses ficam dentro dos diretorios de testes (TV Maze App/TV Maze AppTests/Patch/__Snapshots__/ViewControllerTestCase/test_ControllerSnapshot_Withxxxx.1.png
+
+![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/8baf2023-95d2-47f1-96f7-aedce63c6e90)
+
