@@ -35,6 +35,16 @@ internal class AppCoordinator {
         tabBarAppearance.configureWithOpaqueBackground()
         tabBarAppearance.backgroundColor = .tmDarkGray
         
+        let itemAppearance = UITabBarItemAppearance()
+        itemAppearance.normal.iconColor = .lightGray
+        itemAppearance.selected.iconColor = .tmDarkGreen
+        itemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.lightGray]
+        itemAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.tmDarkGreen]
+        
+        tabBarAppearance.stackedLayoutAppearance = itemAppearance
+        tabBarAppearance.inlineLayoutAppearance = itemAppearance
+        tabBarAppearance.compactInlineLayoutAppearance = itemAppearance
+        
         tabBarController.tabBar.standardAppearance = tabBarAppearance
         if #available(iOS 15.0, *) {
             tabBarController.tabBar.scrollEdgeAppearance = tabBarAppearance
