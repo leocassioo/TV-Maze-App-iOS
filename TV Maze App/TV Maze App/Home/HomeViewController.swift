@@ -13,6 +13,8 @@ internal class HomeViewController: UIViewController {
     internal let tableViewManager: HomeTableViewManager
     private let mainQueue: DispatchQueueProtocol
     
+    private var isKeyboardShown = false
+    
     internal init(presenter: HomePresenterInputProtocol,
                   tableViewManager: HomeTableViewManager = HomeTableViewManager(),
                   mainQueue: DispatchQueueProtocol = DispatchQueue.main) {
@@ -46,7 +48,11 @@ internal class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBarTitleView()
-        focusSearchBar()
+        
+        if !isKeyboardShown {
+            focusSearchBar()
+            isKeyboardShown = true
+        }
     }
     
     private func configureNavigationBarTitleView() {

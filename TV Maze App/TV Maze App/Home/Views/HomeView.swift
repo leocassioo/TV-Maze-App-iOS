@@ -64,8 +64,6 @@ internal class HomeView: UIView {
         backgroundColor = .tmBlack
         tableView.backgroundColor = .tmBlack
         
-        searchBar.text = "papel"
-        
         tableView.register(ShowTableViewCell.self, forCellReuseIdentifier: ShowTableViewCell.identifier)
     }
     
