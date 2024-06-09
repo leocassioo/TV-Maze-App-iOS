@@ -31,6 +31,8 @@
 		3B387B462C160131003077C1 /* HomeTableViewManagerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B452C160131003077C1 /* HomeTableViewManagerSpy.swift */; };
 		3B387B492C16062D003077C1 /* DispatchQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B482C16062D003077C1 /* DispatchQueueProtocol.swift */; };
 		3B387B4B2C1606BF003077C1 /* DispatchQueueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B4A2C1606BF003077C1 /* DispatchQueueSpy.swift */; };
+		3B387B4D2C160A48003077C1 /* UINavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B4C2C160A48003077C1 /* UINavigationControllerSpy.swift */; };
+		3B387B4F2C160A7C003077C1 /* HomeCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B387B4E2C160A7C003077C1 /* HomeCoordinatorTestCase.swift */; };
 		3B9F9BD82C14B1FB001836A5 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */; };
 		3B9F9BDC2C14BB44001836A5 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */; };
 		3B9F9BDF2C14C3C6001836A5 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */; };
@@ -84,6 +86,8 @@
 		3B387B452C160131003077C1 /* HomeTableViewManagerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewManagerSpy.swift; sourceTree = "<group>"; };
 		3B387B482C16062D003077C1 /* DispatchQueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueProtocol.swift; sourceTree = "<group>"; };
 		3B387B4A2C1606BF003077C1 /* DispatchQueueSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueSpy.swift; sourceTree = "<group>"; };
+		3B387B4C2C160A48003077C1 /* UINavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpy.swift; sourceTree = "<group>"; };
+		3B387B4E2C160A7C003077C1 /* HomeCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTestCase.swift; sourceTree = "<group>"; };
 		3B9F9BD72C14B1FB001836A5 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		3B9F9BDB2C14BB44001836A5 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		3B9F9BDE2C14C3C6001836A5 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				3B387B4A2C1606BF003077C1 /* DispatchQueueSpy.swift */,
+				3B387B4C2C160A48003077C1 /* UINavigationControllerSpy.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				3BE71E932C15FA9800771C0F /* Spy */,
 				3BE71E8E2C15F77A00771C0F /* HomePresenterTestCase.swift */,
 				3B387B432C15FF71003077C1 /* HomeViewControllerTestCase.swift */,
+				3B387B4E2C160A7C003077C1 /* HomeCoordinatorTestCase.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE71E922C15F84200771C0F /* ShowModel.swift in Sources */,
+				3B387B4D2C160A48003077C1 /* UINavigationControllerSpy.swift in Sources */,
 				3B19C8222C13DD050075893B /* TV_Maze_AppTests.swift in Sources */,
 				3B387B4B2C1606BF003077C1 /* DispatchQueueSpy.swift in Sources */,
 				3BE71E9B2C15FC2200771C0F /* HomePresenterSpy.swift in Sources */,
@@ -473,6 +480,7 @@
 				3BE71E972C15FB4C00771C0F /* HomeInteractorSpy.swift in Sources */,
 				3BE71E952C15FAAF00771C0F /* HomeViewControllerSpy.swift in Sources */,
 				3BE71E992C15FBBD00771C0F /* HomeCoordinatorSpy.swift in Sources */,
+				3B387B4F2C160A7C003077C1 /* HomeCoordinatorTestCase.swift in Sources */,
 				3B387B442C15FF71003077C1 /* HomeViewControllerTestCase.swift in Sources */,
 				3BE71E8F2C15F77A00771C0F /* HomePresenterTestCase.swift in Sources */,
 			);
