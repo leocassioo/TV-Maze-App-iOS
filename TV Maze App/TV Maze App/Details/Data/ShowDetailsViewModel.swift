@@ -13,4 +13,5 @@ internal struct ShowDetailsViewModel {
     let summary: String
     let rating: String
     let genres: [String?]?
+    let playUrl: String?
 }

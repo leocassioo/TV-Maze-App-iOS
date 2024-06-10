@@ -32,7 +32,18 @@ internal class ShowDetailsView: UIView {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
         return imageView
+    }()
+    
+    internal lazy var playButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "play_button"), for: .normal)
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
+        button.isUserInteractionEnabled = false
+        button.isHidden = true
+        return button
     }()
     
     internal let titleLabel: UILabel = {
@@ -119,6 +130,8 @@ internal class ShowDetailsView: UIView {
         return view
     }()
     
+    internal var playUrl: String?
+    
     internal override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -137,6 +150,7 @@ internal class ShowDetailsView: UIView {
         contentView.addSubview(stackView)
         
         stackView.addArrangedSubview(posterImageView)
+        posterImageView.addSubview(playButton)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(detailsLabel)
         stackView.addArrangedSubview(genresStackView)
@@ -166,12 +180,27 @@ internal class ShowDetailsView: UIView {
             make.edges.equalTo(contentView)
         }
         
+        posterImageView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+        }
+        
+        playButton.snp.makeConstraints { make in
+            make.bottom.trailing.equalToSuperview().inset(10)
+            make.size.equalTo(48)
+        }
+        
         starImageView.snp.makeConstraints { make in
             make.size.equalTo(24)
         }
         
         skeletonView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+    }
+    
+    @objc private func playButtonTapped() {
+        if let playUrl, let url = URL(string: playUrl) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
     
@@ -226,6 +255,14 @@ internal class ShowDetailsView: UIView {
             
             genresStackView.addArrangedSubview(genreLabel)
         }
+    }
+    
+    internal func configurePlayButton(playUrl: String?) {
+        guard playUrl != nil else { return }
+        self.playUrl = playUrl
+        playButton.isUserInteractionEnabled = true
+        playButton.isHidden = false
+        
     }
     
     internal func showLoading() {
