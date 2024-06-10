@@ -57,7 +57,8 @@ final class ShowDetailsViewControllerTestCase: XCTestCase {
             posterURL: "https://example.com/image.jpg",
             summary: "Test Summary",
             rating: "8.0",
-            genres: ["Drama"]
+            genres: ["Drama"],
+            playUrl: "https://example.com/"
         )
         
         // When
@@ -112,7 +113,8 @@ final class ShowDetailsViewControllerTestCase: XCTestCase {
              posterURL: "https://example.com/image.jpg",
              summary: "Test Summary",
              rating: "8.0",
-             genres: ["Drama"]
+             genres: ["Drama"],
+             playUrl: "https://example.com/"
          )
          sut.displayShowDetails(viewModel: viewModel)
          
@@ -127,7 +129,8 @@ final class ShowDetailsViewControllerTestCase: XCTestCase {
             posterURL: "https://example.com/image.jpg",
             summary: "Test Summary",
             rating: "8.0",
-            genres: ["Drama"]
+            genres: ["Drama"],
+            playUrl: "https://example.com/"
         )
         sut.detailView.hideLoading()
         sut.displayShowDetails(viewModel: viewModel)

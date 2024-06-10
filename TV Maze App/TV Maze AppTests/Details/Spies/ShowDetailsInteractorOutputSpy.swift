@@ -14,6 +14,8 @@ final class ShowDetailsInteractorOutputSpy: ShowDetailsInteractorOutputProtocol 
         case didFailToFetchShowDetails
         case didFetchAliases
         case didFailToFetchAliases
+        case didFetchCast
+        case didFailToFetchCast
     }
     
     private(set) var calledMethods: [Method] = []
@@ -32,6 +34,14 @@ final class ShowDetailsInteractorOutputSpy: ShowDetailsInteractorOutputProtocol 
     
     func didFailToFetchAliases(with error: Error) {
         calledMethods.append(.didFailToFetchAliases)
+    }
+    
+    func didFetchCast(cast: [TV_Maze_App.CastModel]?) {
+        calledMethods.append(.didFetchCast)
+    }
+    
+    func didFailToFetchCast(with: any Error) {
+        calledMethods.append(.didFailToFetchCast)
     }
 }
 

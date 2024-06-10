@@ -16,6 +16,8 @@ final class ShowDetailsViewControllerSpy: ShowDetailsPresenterOutputProtocol {
         case displayShowDetails
         case dispayAliases
         case displayErrorAlert
+        case displayCast
+        case displayCastError
     }
     
     private(set) var calledMethods: [Method] = []
@@ -34,5 +36,13 @@ final class ShowDetailsViewControllerSpy: ShowDetailsPresenterOutputProtocol {
     
     func displayErrorAlert(message: String) {
         calledMethods.append(.displayErrorAlert)
+    }
+    
+    func displayCast(cast: [CastModel]) {
+        calledMethods.append(.displayCast)
+    }
+    
+    func displayCastError() {
+        calledMethods.append(.displayCastError)
     }
 }

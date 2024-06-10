@@ -12,6 +12,7 @@ final class ShowDetailsInteractorSpy: ShowDetailsInteractorInputProtocol {
     enum Method: Equatable {
         case fetchShowDetails
         case fetchAliases
+        case fetchCast
     }
     
     private(set) var calledMethods: [Method] = []
@@ -24,6 +25,10 @@ final class ShowDetailsInteractorSpy: ShowDetailsInteractorInputProtocol {
     
     func fetchAliases() {
         calledMethods.append(.fetchAliases)
+    }
+    
+    func fetchCast() {
+        calledMethods.append(.fetchCast)
     }
     
 }

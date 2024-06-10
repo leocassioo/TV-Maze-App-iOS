@@ -75,4 +75,3 @@ internal struct AliaseModel: Decodable {
     let country: Country?
     
 }
-

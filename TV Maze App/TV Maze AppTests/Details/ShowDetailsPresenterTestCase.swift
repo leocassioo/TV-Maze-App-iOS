@@ -36,7 +36,7 @@ final class ShowDetailsPresenterTestCase: XCTestCase {
         sut.viewDidLoad()
         
         // Then
-        XCTAssertEqual(interactorSpy.calledMethods, [.fetchShowDetails, .fetchAliases])
+        XCTAssertEqual(interactorSpy.calledMethods, [.fetchShowDetails, .fetchAliases, .fetchCast])
     }
     
     func test_didFetchShowDetails_CallsDisplayShowDetails() {
