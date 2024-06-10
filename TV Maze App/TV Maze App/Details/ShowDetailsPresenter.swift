@@ -11,6 +11,7 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
     
     internal weak var view: ShowDetailsPresenterOutputProtocol?
     internal var interactor: ShowDetailsInteractorInputProtocol?
+    private var showName: String?
     
     internal func viewDidLoad() {
         interactor?.fetchShowDetails()
@@ -44,7 +45,10 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
     }
     
     internal func didFetchCast(cast: [CastModel]?) {
-        guard let cast else { return }
+        guard let cast, !cast.isEmpty else {
+            view?.displayCastError()
+            return
+        }
         view?.displayCast(cast: cast)
     }
     

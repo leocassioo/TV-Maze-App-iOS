@@ -121,6 +121,7 @@ internal class ShowDetailsView: UIView {
         label.text = "Cast"
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.textColor = .tmWhite
+        label.numberOfLines = 0
         return label
     }()
     
