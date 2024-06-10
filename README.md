@@ -22,7 +22,8 @@ Este projeto consiste em um aplicativo iOS desenvolvido para explorar informaç�
 
 2. **Tela de Detalhes**:
    - Exibe o título, pôster, resumo, classificação e uma lista de aliases do show selecionado.
-   - Adição dos gêneros do show na tela de detalhes.
+   - Adição dos gêneros do programa.
+   - Adição da lista de elenco com uma collectionview, contendo foto, nome real e nome na atuacao do programa
 
 ## Requisitos do Projeto
 
@@ -67,11 +68,12 @@ Há potencial para melhorias no projeto, incluindo a exibição de detalhes mais
 - **LinkedIn**: [Perfil no LinkedIn](https://www.linkedin.com/in/leocassioo) - https://www.linkedin.com/in/leocassioo
 
 ## Adicionais
-**Funcionamento**: https://drive.google.com/file/d/1Qaq-HYEgcvV_yRGQzDivbyYCOtDk_SKW/view?usp=sharing
+**Funcionamento**: https://drive.google.com/file/d/1MVyoQA14rbsWvdlS57l1apyk2eyOWAiX/view?usp=sharing
 
 ![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/b465b677-dd7f-4192-9f05-25880a2e12c9)
-![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/aef0b35d-3540-4a27-847a-88085012f8b3)
+![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/a716e372-5cbb-4a83-8d02-23efb15d047d)
 ![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/9b5ad0fc-1194-4d13-809b-cbd27dc053d3)
+![image](https://github.com/leocassioo/TV-Maze-App-iOS/assets/16023720/c69e7604-5656-4f92-8b63-648f5a82154c)
 
 
 **Cobertura de testes**:
