@@ -137,8 +137,7 @@ internal class ShowTableViewCell: UITableViewCell {
             }
         } else {
             DispatchQueue.main.async {
-                self.showImageView.image = UIImage(systemName: "photo.tv")
-                self.showImageView.tintColor = .gray
+                self.showImageView.image = UIImage(named: "image_placeholder")
                 self.hideSkeleton()
             }
         }

@@ -85,6 +85,8 @@ extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
                 }
             } else {
                 self.detailView.hideLoading()
+                guard let placeholderImage = UIImage(named: "image_placeholder") else { return }
+                self.detailView.configureImage(with: placeholderImage)
             }
         }
     }
