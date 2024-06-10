@@ -31,6 +31,7 @@ internal class ShowTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 8
         imageView.snp.makeConstraints { make in
             make.width.height.equalTo(80)
         }

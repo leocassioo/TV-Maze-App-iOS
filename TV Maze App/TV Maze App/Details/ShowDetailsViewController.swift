@@ -10,11 +10,14 @@ import UIKit
 internal class ShowDetailsViewController: UIViewController {
     internal let detailView = ShowDetailsView()
     private let presenter: ShowDetailsPresenterInputProtocol
+    internal let collectionManager: CastCollectionViewManager
     private let mainQueue: DispatchQueueProtocol
     
     internal init(presenter: ShowDetailsPresenterInputProtocol,
+                  collectionManager: CastCollectionViewManager = CastCollectionViewManager(),
                   mainQueue: DispatchQueueProtocol = DispatchQueue.main) {
         self.presenter = presenter
+        self.collectionManager = collectionManager
         self.mainQueue = mainQueue
         super.init(nibName: nil, bundle: nil)
     }
@@ -31,6 +34,8 @@ internal class ShowDetailsViewController: UIViewController {
     
     internal override func viewDidLoad() {
         super.viewDidLoad()
+        detailView.castCollectionView.dataSource = collectionManager
+        detailView.castCollectionView.delegate = collectionManager
         presenter.viewDidLoad()
         detailView.showLoading()
     }
@@ -65,14 +70,14 @@ internal class ShowDetailsViewController: UIViewController {
 }
 
 extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
+    
     internal func displayShowDetails(viewModel: ShowDetailsViewModel) {
         mainQueue.async {
-            self.detailView.titleLabel.text = viewModel.title
-            self.detailView.ratingLabel.text = viewModel.rating
             
-            self.detailView.configureSummary(with: viewModel.summary)
+            self.detailView.configView(title: viewModel.title, rating: viewModel.rating)
+            self.detailView.configSummary(with: viewModel.summary)
             self.detailView.configGenres(genres: viewModel.genres)
-            self.detailView.configurePlayButton(playUrl: viewModel.playUrl)
+            self.detailView.configPlayButton(playUrl: viewModel.playUrl)
             
             if let imageUrl = viewModel.posterURL, let url = URL(string: imageUrl) {
                 DispatchQueue.global().async {
@@ -93,8 +98,19 @@ extension ShowDetailsViewController: ShowDetailsPresenterOutputProtocol {
     
     internal func dispayAliases(aliases: [AliaseModel]) {
         mainQueue.async {
-            self.detailView.configureAliases(with: aliases)
+            self.detailView.configAliases(with: aliases)
         }
+    }
+    
+    internal func displayCast(cast: [CastModel]) {
+        mainQueue.async {
+            self.collectionManager.update(with: cast)
+            self.detailView.configCast(cast: cast)
+        }
+    }
+    
+    internal func displayCastError() {
+        detailView.configErrorCast()
     }
     
     internal func displayErrorAlert(message: String) {

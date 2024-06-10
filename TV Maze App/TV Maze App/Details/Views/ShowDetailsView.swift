@@ -54,15 +54,7 @@ internal class ShowDetailsView: UIView {
         label.numberOfLines = 0
         return label
     }()
-    
-    internal let detailsLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.textColor = .tmWhite
-        label.textAlignment = .center
-        return label
-    }()
-    
+
     internal let genresStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -124,6 +116,23 @@ internal class ShowDetailsView: UIView {
         return label
     }()
     
+    internal let castLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Cast"
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.textColor = .tmWhite
+        return label
+    }()
+    
+    internal let castCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        collectionView.register(CastCollectionViewCell.self, forCellWithReuseIdentifier: CastCollectionViewCell.identifier)
+        return collectionView
+    }()
+    
     internal let skeletonView: SkeletonView = {
         let view = SkeletonView()
         view.isHidden = true
@@ -152,12 +161,13 @@ internal class ShowDetailsView: UIView {
         stackView.addArrangedSubview(posterImageView)
         posterImageView.addSubview(playButton)
         stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(detailsLabel)
         stackView.addArrangedSubview(genresStackView)
         stackView.addArrangedSubview(aliasesStackView)
         stackView.addArrangedSubview(ratingStackView)
         stackView.addArrangedSubview(summaryTitleLabel)
         stackView.addArrangedSubview(summaryLabel)
+        stackView.addArrangedSubview(castLabel)
+        stackView.addArrangedSubview(castCollectionView)
         
         aliasesStackView.addArrangedSubview(aliasesLabel)
         
@@ -196,12 +206,25 @@ internal class ShowDetailsView: UIView {
         skeletonView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        
+        castCollectionView.snp.makeConstraints { make in
+            make.height.equalTo(270)
+            make.leading.trailing.equalToSuperview()
+        }
     }
+}
+
+extension ShowDetailsView {
     
     @objc private func playButtonTapped() {
         if let playUrl, let url = URL(string: playUrl) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+    }
+    
+    internal func configView(title: String, rating: String) {
+        titleLabel.text = title
+        ratingLabel.text = rating
     }
     
     internal func configureImage(with image: UIImage) {
@@ -216,7 +239,7 @@ internal class ShowDetailsView: UIView {
         }
     }
     
-    internal func configureSummary(with htmlText: String) {
+    internal func configSummary(with htmlText: String) {
         if let data = htmlText.data(using: .utf8) {
             let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
                 .documentType: NSAttributedString.DocumentType.html,
@@ -231,7 +254,7 @@ internal class ShowDetailsView: UIView {
         }
     }
     
-    internal func configureAliases(with aliases: [AliaseModel]) {
+    internal func configAliases(with aliases: [AliaseModel]) {
         guard !aliases.isEmpty else { return }
         let aliasesText = aliases.map { $0.name }.joined(separator: ", ")
         aliasesLabel.text = "Also known as: \(aliasesText)"
@@ -257,12 +280,22 @@ internal class ShowDetailsView: UIView {
         }
     }
     
-    internal func configurePlayButton(playUrl: String?) {
+    internal func configPlayButton(playUrl: String?) {
         guard playUrl != nil else { return }
         self.playUrl = playUrl
         playButton.isUserInteractionEnabled = true
         playButton.isHidden = false
         
+    }
+    
+    internal func configCast(cast: [CastModel]) {
+        castLabel.text = "\(titleLabel.text ?? "") - Cast"
+        castCollectionView.reloadData()
+    }
+    
+    internal func configErrorCast() {
+        castLabel.isHidden = true
+        castCollectionView.isHidden = true
     }
     
     internal func showLoading() {

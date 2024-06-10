@@ -15,6 +15,7 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
     internal func viewDidLoad() {
         interactor?.fetchShowDetails()
         interactor?.fetchAliases()
+        interactor?.fetchCast()
     }
     
     internal func didFetchShowDetails(showDetails: Show?) {
@@ -33,12 +34,21 @@ internal class ShowDetailsPresenter: ShowDetailsPresenterInputProtocol, ShowDeta
         view?.displayErrorAlert(message: error.localizedDescription)
     }
     
-    func didFetchAliases(aliases: [AliaseModel]?) {
+    internal func didFetchAliases(aliases: [AliaseModel]?) {
         guard let aliases else { return }
         view?.dispayAliases(aliases: aliases)
     }
     
-    func didFailToFetchAliases(with error: Error) {
+    internal func didFailToFetchAliases(with error: Error) {
         view?.displayErrorAlert(message: error.localizedDescription)
+    }
+    
+    internal func didFetchCast(cast: [CastModel]?) {
+        guard let cast else { return }
+        view?.displayCast(cast: cast)
+    }
+    
+    internal func didFailToFetchCast(with: Error) {
+        view?.displayCastError()
     }
 }

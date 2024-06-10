@@ -43,4 +43,17 @@ internal class ShowDetailsInteractor: ShowDetailsInteractorInputProtocol {
             }
         }
     }
+    
+    internal func fetchCast() {
+        let constructor = ShowDetailsConstructor.cast(id: showId)
+        
+        networkService.request(constructor: constructor) { (result: Result<[CastModel]?, Error>) in
+            switch result {
+            case .success(let cast):
+                self.output?.didFetchCast(cast: cast)
+            case .failure(let error):
+                self.output?.didFailToFetchCast(with: error)
+            }
+        }
+    }
 }

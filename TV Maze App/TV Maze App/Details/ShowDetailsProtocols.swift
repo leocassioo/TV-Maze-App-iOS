@@ -17,6 +17,7 @@ internal protocol ShowDetailsInteractorInputProtocol: AnyObject {
     var output: ShowDetailsInteractorOutputProtocol? { get set }
     func fetchShowDetails()
     func fetchAliases()
+    func fetchCast()
 }
 
 // MARK: - Interactor -> Presenter
@@ -26,6 +27,9 @@ internal protocol ShowDetailsInteractorOutputProtocol: AnyObject {
     
     func didFetchAliases(aliases: [AliaseModel]?)
     func didFailToFetchAliases(with: Error)
+    
+    func didFetchCast(cast: [CastModel]?)
+    func didFailToFetchCast(with: Error)
 }
 
 // MARK: - View -> Presenter
@@ -39,5 +43,7 @@ internal protocol ShowDetailsPresenterInputProtocol: AnyObject {
 internal protocol ShowDetailsPresenterOutputProtocol: AnyObject {
     func displayShowDetails(viewModel: ShowDetailsViewModel)
     func dispayAliases(aliases: [AliaseModel])
+    func displayCast(cast: [CastModel])
+    func displayCastError()
     func displayErrorAlert(message: String)
 }
